@@ -48,6 +48,7 @@ Each batch should be appended to the table below after processing completes.
 | batch_001 | batch_001_input.csv | batch_001.csv | 1-50 | 50 | $1,833,768 | 24 | 16 | 10 | 21 | ✅ Complete | See detailed entry below |
 | batch_002 | batch_002_input.csv | batch_002.csv | 51-100 | 50 | $226,139 | 33 | 11 | 6 | 18 | ✅ Complete | See detailed entry below |
 | batch_003 | batch_003_input.csv | batch_003.csv | 101-150 | 50 | $82,101 | 24 | 22 | 4 | 14 | ✅ Complete | See detailed entry below |
+| batch_004 | batch_004_input.csv | batch_004.csv | 151-200 | 50 | $30,053 | 24 | 14 | 12 | 27 | ✅ Complete | See detailed entry below |
 
 ---
 
@@ -140,3 +141,34 @@ Each batch should be appended to the table below after processing completes.
 - **Food service consolidation opportunity:** Four separate meal/catering vendors totaling $6,914 could be consolidated, especially the three Croatian providers (Lunch Nutrition, Oladi, Etm Concessions)
 - **Low-confidence vendors require validation:** Four vendors (Pink Ribbon Shop, Clime India, Golden Mean, Rhea D.O.O.) have unclear business purposes and should be reviewed for necessity
 - **One-time service (Office Move London):** $2,293 office relocation expense flagged for termination as service should be complete; verify no ongoing relationship
+
+---
+
+### Batch 004 - Detailed Entry
+
+**Input File:** `02_working/01_batches/batch_004_input.csv`
+**Output File:** `03_outputs/01_claude_batches/batch_004.csv`
+**Row Range:** 151-200 (from batch_manifest.csv)
+**Vendor Count:** 50
+**Total Spend:** $30,053.00
+
+**Confidence Distribution:**
+- High: 24 vendors (48%)
+- Medium: 14 vendors (28%)
+- Low: 12 vendors (24%)
+
+**Suspected Duplicates:** 27 rows flagged with potential duplicates
+
+**Example Duplicate Groups:**
+1. **Food & Restaurant Consolidation:** Mesa Verde, Obrt Za Ugostiteljstvo Mirakul, Oakberry Jr D.O.O., Magic Mountain Saloon, Yellow Submarine D.O.O., Vivat Fina Vina D.O.O., Del Posto D.O.O. (7 vendors, $3,609 combined)
+2. **Transport & Travel Services:** Galop-Prijevoz D.O.O., Trans-Agram Obrt Za Dostavu, Croatia Airlines, Greencell Express Private Limited, Lancefield Bus Service, Super Odredište D.O.O. (6 vendors, $3,138 combined)
+3. **Hotel Accommodation:** President Hotel And Tower Co., Hotel Zonar, Marvie Hotel - Krupa D.O.O., Obiteljski Hoteli D.O.O., Edwardian Pastoria Hotels Ltd (5 vendors, $2,735 combined)
+4. **Legal Services:** Lane Ip Limited, Kilgannon & Partners Llp, Pixsy Inc, Franklin, Gringer & Cohen, P.C. (4 vendors, $2,386 combined)
+5. **Events & Marketing:** Time Out Group, Urbani Eventi D.O.O., Blink Events (3 vendors, $2,435 combined)
+
+**Classification Notes and Assumptions:**
+- **High duplicate vendor fragmentation:** 27 of 50 vendors (54%) flagged in duplicate groups, indicating significant consolidation opportunity across travel, food, legal, and events categories
+- **Croatian D.O.O. entity ambiguity:** Twelve low-to-medium confidence Croatian vendors (BB Football Scouting, BOE Croatia, Potomac, Tau On-Line, Roto Dinamic, Rudan, E-Disti, Tiganda, etc.) have unclear business purposes and require stakeholder validation
+- **Travel & Expense policy gaps:** Combined T&E spend of $5,873 across 11 vendors (hotels, airlines, transport) suggests lack of preferred vendor agreements and travel management controls
+- **One-time service vendors:** Student Packers & Movers ($371), The Cycle Gap Adyar ($765), and potentially Blitz-Cinestar ($426) appear to be one-time purchases flagged for termination review
+- **SaaS optimization opportunity:** Three SaaS vendors (Epignosis LLC, Tau On-Line, Entrio Tehnologije) totaling $1,840 should be reviewed for license utilization and subscription optimization
