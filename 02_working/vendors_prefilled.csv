@@ -1,37 +1,37 @@
 vendor_name_raw,spend_usd,vendor_name_clean,vendor_name_canonical,department_prefill,category_prefill,description_prefill,suggestion_prefill,rule_id,needs_llm
 Salesforce Uk Ltd-Uk,3117226.0,salesforce uk ltd-uk,salesforce uk ltd-uk,Sales,CRM,CRM platform for sales and customer management,Consolidate,R001,False
 Navan (Tripactions Inc),357984.0,navan (tripactions inc),navan,Finance,Travel & Expense,Corporate travel booking and expense management,Consolidate,R006,False
-Bdo Llp,343081.0,bdo llp,bdo,Finance,Audit/Tax,Audit tax and financial advisory services,Consolidate,R009,False
+Bdo Llp,343081.0,bdo llp,bdo,Professional Services,Audit/Tax,Audit tax and financial advisory services,Consolidate,R009,False
 Tog Uk Properties Limited,263821.0,tog uk properties limited,tog uk properties,Facilities,Coworking/Office,Flexible coworking and office space,Optimize costs,R007,False
 Cloudcrossing Bvba,208675.0,cloudcrossing bvba,cloudcrossing,,,,,,True
 Zagrebtower D.O.O.,183754.0,zagrebtower d.o.o.,zagrebtower,,,,,,True
 Innovent Spaces Private Limited,147348.0,innovent spaces private limited,innovent spaces private,Facilities,Coworking/Office,Flexible coworking and office space,Optimize costs,R007,False
 Weking D.O.O.,144093.0,weking d.o.o.,weking,,,,,,True
-Jensten Insurance Brokers,142700.0,jensten insurance brokers,jensten insurance brokers,HR,General Ops,Employee health and insurance benefits,Consolidate,R025,False
+Jensten Insurance Brokers,142700.0,jensten insurance brokers,jensten insurance brokers,G&A,General Ops,Employee health and insurance benefits,Consolidate,R025,False
 Gpt Space & Co,133507.0,gpt space & co,gpt space &,,,,,,True
-Aetna Life And Casualty Ltd,124661.0,aetna life and casualty ltd,aetna life and casualty,HR,General Ops,Employee health and insurance benefits,Consolidate,R025,False
-Rsm Uk Corporate Finance Llp,117078.0,rsm uk corporate finance llp,rsm uk corporate finance,Finance,Audit/Tax,Audit tax and financial advisory services,Consolidate,R009,False
-Amazon Web Services Llc,106399.0,amazon web services llc,amazon web services,IT,Cloud,Cloud infrastructure and computing services,Optimize costs,R003,False
-Telefonica Global Services Gmbh,89880.0,telefonica global services gmbh,telefonica global services,IT,Telecom,Telecommunications and mobile services,Consolidate,R008,False
+Aetna Life And Casualty Ltd,124661.0,aetna life and casualty ltd,aetna life and casualty,G&A,General Ops,Employee health and insurance benefits,Consolidate,R025,False
+Rsm Uk Corporate Finance Llp,117078.0,rsm uk corporate finance llp,rsm uk corporate finance,Professional Services,Audit/Tax,Audit tax and financial advisory services,Consolidate,R009,False
+Amazon Web Services Llc,106399.0,amazon web services llc,amazon web services,Engineering,Cloud,Cloud infrastructure and computing services,Optimize costs,R003,False
+Telefonica Global Services Gmbh,89880.0,telefonica global services gmbh,telefonica global services,G&A,Telecom,Telecommunications and mobile services,Consolidate,R008,False
 Hr Solution International Gmbh,80823.0,hr solution international gmbh,hr solution international,,,,,,True
 4I Advisory Services,71860.0,4i advisory services,4i advisory services,,,,,,True
 Bisley Law Ltd,67414.0,bisley law ltd,bisley law,Legal,Legal Services,Legal counsel and advisory services,Consolidate,R010,False
-Infosys,66570.0,infosys,infosys,IT,Security/IT Ops,IT consulting and managed services,Optimize costs,R022,False
+Infosys,66570.0,infosys,infosys,G&A,Security/IT Ops,IT consulting and managed services,Optimize costs,R022,False
 Big Frontier Pty Ltd (Cult Of Monday),66131.0,big frontier pty ltd (cult of monday),big frontier,,,,,,True
 Harmonic Group Limited,65418.0,harmonic group limited,harmonic group,,,,,,True
 Wework Singapore Pte. Ltd.,64373.0,wework singapore pte. ltd.,wework singapore,Facilities,Coworking/Office,Flexible coworking and office space,Optimize costs,R007,False
-Cloud Technology Solutions Ltd,60661.0,cloud technology solutions ltd,cloud technology solutions,IT,Security/IT Ops,IT consulting and managed services,Optimize costs,R022,False
+Cloud Technology Solutions Ltd,60661.0,cloud technology solutions ltd,cloud technology solutions,G&A,Security/IT Ops,IT consulting and managed services,Optimize costs,R022,False
 "Navan, Inc",57929.0,"navan, inc",navan,Finance,Travel & Expense,Corporate travel booking and expense management,Consolidate,R006,False
 Tmforum,57560.0,tmforum,tmforum,,,,,,True
 Linkedin Ireland Limited,55573.0,linkedin ireland limited,linkedin ireland,Marketing,Marketing/SEO/PR,Professional networking and recruitment advertising,Optimize costs,R012,False
 Kimble Applications Ltd,52825.0,kimble applications ltd,kimble applications,,,,,,True
 Sage Uk Limited,46895.0,sage uk limited,sage uk,Finance,Finance Systems,Financial planning and accounting software,Consolidate,R021,False
-Grant Thornton,46539.0,grant thornton,grant thornton,Finance,Audit/Tax,Audit tax and financial advisory services,Consolidate,R009,False
+Grant Thornton,46539.0,grant thornton,grant thornton,Professional Services,Audit/Tax,Audit tax and financial advisory services,Consolidate,R009,False
 "SveuäIliå¡Te U Zagrebu, Studentski Centar",44299.0,"sveu ili te u zagrebu, studentski centar","sveu ili te u zagrebu, studentski centar",,,,,,True
 Ss&C Intralinks Inc,39966.0,ss&c intralinks inc,ss&c intralinks,,,,,,True
 Veniture D.O.O.,39342.0,veniture d.o.o.,veniture,,,,,,True
 Accutrainee Limited,38841.0,accutrainee limited,accutrainee,,,,,,True
-Mason Frank International Ltd,38148.0,mason frank international ltd,mason frank international,HR,Recruiting,Talent acquisition and recruitment services,Consolidate,R011,False
+Mason Frank International Ltd,38148.0,mason frank international ltd,mason frank international,G&A,Recruiting,Talent acquisition and recruitment services,Consolidate,R011,False
 "Houlihan Lokey Advisors, Llc",37461.0,"houlihan lokey advisors, llc",houlihan lokey advisors,,,,,,True
 Vector Capital Management Lp,32427.0,vector capital management lp,vector capital management,,,,,,True
 Hubspot Ireland Limited,32187.0,hubspot ireland limited,hubspot ireland,Marketing,CRM,Marketing automation and CRM platform,Consolidate,R002,False
@@ -40,24 +40,24 @@ Nefron - Obrt Za Poslovne Usluge,30614.0,nefron - obrt za poslovne usluge,nefron
 Cognism Limited,27013.0,cognism limited,cognism,Sales,Sales Engagement,B2B contact data and sales intelligence,Consolidate,R018,False
 Uberflip,26091.0,uberflip,uberflip,,,,,,True
 Agram Life Osiguranje D.O.O.,24952.0,agram life osiguranje d.o.o.,agram life osiguranje,,,,,,True
-Google Ireland Limited,24798.0,google ireland limited,google ireland,IT,Productivity/Collab,Workspace collaboration and productivity tools,Consolidate,R005,False
+Google Ireland Limited,24798.0,google ireland limited,google ireland,SaaS,Productivity/Collab,Workspace collaboration and productivity tools,Consolidate,R005,False
 Zuric I Partneri Odvjetnicko Drustvo D.O.O.,24135.0,zuric i partneri odvjetnicko drustvo d.o.o.,zuric i partneri odvjetnicko drustvo,,,,,,True
-Care Health Insurance Company Limited,24045.0,care health insurance company limited,care health insurance,HR,General Ops,Employee health and insurance benefits,Consolidate,R025,False
+Care Health Insurance Company Limited,24045.0,care health insurance company limited,care health insurance,G&A,General Ops,Employee health and insurance benefits,Consolidate,R025,False
 New Star Networks(Nsn),23887.0,new star networks(nsn),new star networks,,,,,,True
-Bupa- Supplier,22800.0,bupa- supplier,bupa- supplier,HR,General Ops,Employee health and insurance benefits,Consolidate,R025,False
+Bupa- Supplier,22800.0,bupa- supplier,bupa- supplier,G&A,General Ops,Employee health and insurance benefits,Consolidate,R025,False
 Shree Info System Solutions Pvt Ltd,22275.0,shree info system solutions pvt ltd,shree info system solutions,,,,,,True
-Technet It Recruitment,21952.0,technet it recruitment,technet it recruitment,HR,Recruiting,Talent acquisition and recruitment services,Consolidate,R011,False
+Technet It Recruitment,21952.0,technet it recruitment,technet it recruitment,G&A,Recruiting,Talent acquisition and recruitment services,Consolidate,R011,False
 Mightyhive Ltd,19042.0,mightyhive ltd,mightyhive,,,,,,True
-Cedar Recruitment Ltd,18537.0,cedar recruitment ltd,cedar recruitment,HR,Recruiting,Talent acquisition and recruitment services,Consolidate,R011,False
+Cedar Recruitment Ltd,18537.0,cedar recruitment ltd,cedar recruitment,G&A,Recruiting,Talent acquisition and recruitment services,Consolidate,R011,False
 Eurofast International Ltd-Greec,18164.0,eurofast international ltd-greec,eurofast international ltd-greec,,,,,,True
-Hrvatski Telekom D.D.,18084.0,hrvatski telekom d.d.,hrvatski telekom,IT,Telecom,Telecommunications and mobile services,Consolidate,R008,False
+Hrvatski Telekom D.D.,18084.0,hrvatski telekom d.d.,hrvatski telekom,G&A,Telecom,Telecommunications and mobile services,Consolidate,R008,False
 Sodexo Svc India Private Limited,17810.0,sodexo svc india private limited,sodexo svc india private,,,,,,True
 Peakon Aps,17108.0,peakon aps,peakon,,,,,,True
 Plus Your Business Ltd,17074.0,plus your business ltd,plus your business,,,,,,True
 Benefit Systems D.O.O.,16900.0,benefit systems d.o.o.,benefit systems,,,,,,True
 Smart Group Services D.O.O.,16438.0,smart group services d.o.o.,smart group services,,,,,,True
 Jones Lang Lasalle (Nsw) Pty Ltd,16274.0,jones lang lasalle (nsw) pty ltd,jones lang lasalle,,,,,,True
-"Workato, Inc.",16101.0,"workato, inc.",workato,IT,Productivity/Collab,Integration and workflow automation platform,Optimize costs,R026,False
+"Workato, Inc.",16101.0,"workato, inc.",workato,SaaS,Productivity/Collab,Integration and workflow automation platform,Optimize costs,R026,False
 Konzum Plus D.O.O.,15684.0,konzum plus d.o.o.,konzum plus,,,,,,True
 Westbrook Advisers,15360.0,westbrook advisers,westbrook advisers,,,,,,True
 Work Easy Space Solutions Private Limited,14913.0,work easy space solutions private limited,work easy space solutions private,,,,,,True
@@ -66,9 +66,9 @@ Pingo D.O.O.,14508.0,pingo d.o.o.,pingo,,,,,,True
 Magazin Raunalni Sistemi D.O.O.,13870.0,magazin raunalni sistemi d.o.o.,magazin raunalni sistemi,,,,,,True
 Tp Prime D.O.O.,13785.0,tp prime d.o.o.,tp prime,,,,,,True
 Granttree Limited,13659.0,granttree limited,granttree,,,,,,True
-Cigna Sg,13249.0,cigna sg,cigna sg,HR,General Ops,Employee health and insurance benefits,Consolidate,R025,False
+Cigna Sg,13249.0,cigna sg,cigna sg,G&A,General Ops,Employee health and insurance benefits,Consolidate,R025,False
 Collards Chartered Accountants,12879.0,collards chartered accountants,collards chartered accountants,,,,,,True
-Bupa Australia,12463.0,bupa australia,bupa australia,HR,General Ops,Employee health and insurance benefits,Consolidate,R025,False
+Bupa Australia,12463.0,bupa australia,bupa australia,G&A,General Ops,Employee health and insurance benefits,Consolidate,R025,False
 4I Management Consulting Private Limited,12117.0,4i management consulting private limited,4i management consulting private,,,,,,True
 "Grad Zagreb, Gradski Ured Za Prostorno Ureä‘Enje,..",11637.0,"grad zagreb, gradski ured za prostorno ure enje,..","grad zagreb, gradski ured za prostorno ure enje",,,,,,True
 Bijeli Pijesak Obrt Za Poslovno Savjetovanje,11605.0,bijeli pijesak obrt za poslovno savjetovanje,bijeli pijesak obrt za poslovno savjetovanje,,,,,,True
@@ -78,7 +78,7 @@ Poles Ltd - Hanbury Manor,10488.0,poles ltd - hanbury manor,poles ltd - hanbury 
 Shoff Darby Companies,10100.0,shoff darby companies,shoff darby,,,,,,True
 Emerge Development Consultancy Ltd,10046.0,emerge development consultancy ltd,emerge development consultancy,,,,,,True
 Performancepro,10018.0,performancepro,performancepro,,,,,,True
-Microsoft Ireland Operations Limited,9822.0,microsoft ireland operations limited,microsoft ireland operations,IT,Productivity/Collab,Office productivity and collaboration suite,Consolidate,R004,False
+Microsoft Ireland Operations Limited,9822.0,microsoft ireland operations limited,microsoft ireland operations,SaaS,Productivity/Collab,Office productivity and collaboration suite,Consolidate,R004,False
 Catering Muring,9603.0,catering muring,catering muring,Facilities,General Ops,Employee catering and food services,Optimize costs,R030,False
 Omonia D.O.O.,9559.0,omonia d.o.o.,omonia,,,,,,True
 Outreach Corporation,9206.0,outreach corporation,outreach,Sales,Sales Engagement,Sales engagement and automation platform,Consolidate,R017,False
@@ -91,7 +91,7 @@ Hrsolution International Ag,6987.0,hrsolution international ag,hrsolution intern
 Trello,6674.0,trello,trello,Product,Productivity/Collab,Project management and task tracking,Consolidate,R014,False
 Obrt Sjaj Sunca,6596.0,obrt sjaj sunca,obrt sjaj sunca,,,,,,True
 Telefã³Nica Compras Electrã³Nicas S.L.,6157.0,telef nica compras electr nicas s.l.,telef nica compras electr nicas,,,,,,True
-Allianz Australia Workers' Compensation (Victoria) Limited,6099.0,allianz australia workers' compensation (victoria) limited,allianz australia workers' compensation,HR,General Ops,Employee health and insurance benefits,Consolidate,R025,False
+Allianz Australia Workers' Compensation (Victoria) Limited,6099.0,allianz australia workers' compensation (victoria) limited,allianz australia workers' compensation,G&A,General Ops,Employee health and insurance benefits,Consolidate,R025,False
 Icici Lombard Gic Ltd,5972.0,icici lombard gic ltd,icici lombard gic,,,,,,True
 Mosaic Concept D.O.O.,5731.0,mosaic concept d.o.o.,mosaic concept,,,,,,True
 Limes Plus D.O.O.,5624.0,limes plus d.o.o.,limes plus,,,,,,True
@@ -100,18 +100,18 @@ Acclime Corporate Services,5413.0,acclime corporate services,acclime corporate s
 Green Commute Initiative,5402.0,green commute initiative,green commute initiative,,,,,,True
 Tattu Manchester Limited,5366.0,tattu manchester limited,tattu manchester,,,,,,True
 Athlete Service Ltd,5285.0,athlete service ltd,athlete service,,,,,,True
-Amazon Web Services Inc.,5153.0,amazon web services inc.,amazon web services,IT,Cloud,Cloud infrastructure and computing services,Optimize costs,R003,False
+Amazon Web Services Inc.,5153.0,amazon web services inc.,amazon web services,Engineering,Cloud,Cloud infrastructure and computing services,Optimize costs,R003,False
 Telemach Hrvatska D.O.O.,5134.0,telemach hrvatska d.o.o.,telemach hrvatska,,,,,,True
 "Acclime Usa, Inc",4995.0,"acclime usa, inc",acclime usa,,,,,,True
 Centar Za Sigurnost D.O.O.,4991.0,centar za sigurnost d.o.o.,centar za sigurnost,,,,,,True
 Profi Bar D.O.O.,4917.0,profi bar d.o.o.,profi bar,,,,,,True
-Pricewaterhousecoopers Llp,4879.0,pricewaterhousecoopers llp,pricewaterhousecoopers,Finance,Audit/Tax,Audit tax and financial advisory services,Consolidate,R009,False
+Pricewaterhousecoopers Llp,4879.0,pricewaterhousecoopers llp,pricewaterhousecoopers,Professional Services,Audit/Tax,Audit tax and financial advisory services,Consolidate,R009,False
 Pinnacle Partnership Ca,4836.0,pinnacle partnership ca,pinnacle partnership ca,,,,,,True
 The Virtual Legal Counsel Ltd,4800.0,the virtual legal counsel ltd,the virtual legal counsel,Legal,Legal Services,Legal counsel and advisory services,Consolidate,R010,False
 Australian Payroll Professionals Pty Ltd,4399.0,australian payroll professionals pty ltd,australian payroll professionals,,,,,,True
 Inter Continental Chennai Mahabalipuram Resort,4393.0,inter continental chennai mahabalipuram resort,inter continental chennai mahabalipuram resort,,,,,,True
 Jetbrains S.R.O.,4083.0,jetbrains s.r.o.,jetbrains,Engineering,Productivity/Collab,Integrated development environment IDE software,Optimize costs,R028,False
-Crowe Horwath Revizija D.O.O.,4062.0,crowe horwath revizija d.o.o.,crowe horwath revizija,Finance,Audit/Tax,Audit tax and financial advisory services,Consolidate,R009,False
+Crowe Horwath Revizija D.O.O.,4062.0,crowe horwath revizija d.o.o.,crowe horwath revizija,Professional Services,Audit/Tax,Audit tax and financial advisory services,Consolidate,R009,False
 Puducherry Backwater Resort Private Limited,4056.0,puducherry backwater resort private limited,puducherry backwater resort private,,,,,,True
 Orionw Llc,4025.0,orionw llc,orionw,,,,,,True
 Adobe Systems Software,3929.0,adobe systems software,adobe systems software,Marketing,Product/Design,Creative design and marketing software,Optimize costs,R016,False
@@ -120,7 +120,7 @@ Hep Elektra D.O.O.,3735.0,hep elektra d.o.o.,hep elektra,,,,,,True
 Zivi Napitak D.O.O.,3700.0,zivi napitak d.o.o.,zivi napitak,,,,,,True
 Gym4You D.O.O.,3692.0,gym4you d.o.o.,gym4you,,,,,,True
 Aha! Labs Inc,3689.0,aha labs inc,aha labs,,,,,,True
-Apple Retail Uk Ltd,3548.0,apple retail uk ltd,apple retail uk,IT,General Ops,Hardware and device purchases,Optimize costs,R034,False
+Apple Retail Uk Ltd,3548.0,apple retail uk ltd,apple retail uk,G&A,General Ops,Hardware and device purchases,Optimize costs,R034,False
 "Kryterion, Inc.",3541.0,"kryterion, inc.",kryterion,,,,,,True
 Npm Inc,3535.0,npm inc,npm,,,,,,True
 Pinsent Masons Mpillay Llp,4078.0,pinsent masons mpillay llp,pinsent masons mpillay,,,,,,True
@@ -132,17 +132,17 @@ Sniper Systems And Solutions Private Limited,3899.0,sniper systems and solutions
 Trocadero (London) Hotel Ltd,3868.0,trocadero (london) hotel ltd,trocadero hotel,,,,,,True
 Semrush Inc,3730.0,semrush inc,semrush,Marketing,Marketing/SEO/PR,SEO and digital marketing analytics,Optimize costs,R019,False
 Golubica Parking D.O.O.,3726.0,golubica parking d.o.o.,golubica parking,Facilities,General Ops,Employee parking and facilities services,Optimize costs,R029,False
-Vodafone (Australian),3672.0,vodafone (australian),vodafone,IT,Telecom,Telecommunications and mobile services,Consolidate,R008,False
+Vodafone (Australian),3672.0,vodafone (australian),vodafone,G&A,Telecom,Telecommunications and mobile services,Consolidate,R008,False
 Ikea Hrvatska D.O.O.,3610.0,ikea hrvatska d.o.o.,ikea hrvatska,,,,,,True
 Orcola D.O.O.,3545.0,orcola d.o.o.,orcola,,,,,,True
 Info Edge India Limited,3536.0,info edge india limited,info edge india,,,,,,True
 Grad Split,3483.0,grad split,grad split,,,,,,True
-T-Mobile,3357.0,t-mobile,t-mobile,IT,Telecom,Telecommunications and mobile services,Consolidate,R008,False
+T-Mobile,3357.0,t-mobile,t-mobile,G&A,Telecom,Telecommunications and mobile services,Consolidate,R008,False
 Akton D.O.O.,3254.0,akton d.o.o.,akton,,,,,,True
 Bureau Veritas Croatia D.O.O.,3200.0,bureau veritas croatia d.o.o.,bureau veritas croatia,,,,,,True
-Cici Prudential Life Insurance Co. Ltd.,3195.0,cici prudential life insurance co. ltd.,cici prudential life insurance,HR,General Ops,Employee health and insurance benefits,Consolidate,R025,False
+Cici Prudential Life Insurance Co. Ltd.,3195.0,cici prudential life insurance co. ltd.,cici prudential life insurance,G&A,General Ops,Employee health and insurance benefits,Consolidate,R025,False
 Ncc Services Limited,3036.0,ncc services limited,ncc services,,,,,,True
-Smartsheet Inc.,2995.0,smartsheet inc.,smartsheet,Operations,Productivity/Collab,Work management and collaboration platform,Consolidate,R023,False
+Smartsheet Inc.,2995.0,smartsheet inc.,smartsheet,SaaS,Productivity/Collab,Work management and collaboration platform,Consolidate,R023,False
 Good Game Global D.O.O.,2954.0,good game global d.o.o.,good game global,,,,,,True
 Garaå¾A Firule D.O.O.,2930.0,gara a firule d.o.o.,gara a firule,,,,,,True
 Crossland,2924.0,crossland,crossland,,,,,,True
@@ -160,7 +160,7 @@ City Pantry Ltd,2419.0,city pantry ltd,city pantry,,,,,,True
 Stipe Piric,2302.0,stipe piric,stipe piric,,,,,,True
 Office Move London,2293.0,office move london,office move london,,,,,,True
 Pink Ribbon Shop,2251.0,pink ribbon shop,pink ribbon shop,,,,,,True
-Starhub Ltd (Supplier),2205.0,starhub ltd (supplier),starhub,IT,Telecom,Telecommunications and mobile services,Consolidate,R008,False
+Starhub Ltd (Supplier),2205.0,starhub ltd (supplier),starhub,G&A,Telecom,Telecommunications and mobile services,Consolidate,R008,False
 N S Shastri And Co,2194.0,n s shastri and co,n s shastri and,,,,,,True
 John Smith,2163.0,john smith,john smith,,,,,,True
 Fabiola Thistlewhaite,2154.0,fabiola thistlewhaite,fabiola thistlewhaite,,,,,,True
@@ -169,10 +169,10 @@ Cision Pr Newswire,2110.0,cision pr newswire,cision pr newswire,Marketing,Market
 George Anchor,2107.0,george anchor,george anchor,,,,,,True
 "Yoxel, Inc",2044.0,"yoxel, inc",yoxel,,,,,,True
 Grt Hotels And Resorts P Ltd,2032.0,grt hotels and resorts p ltd,grt hotels and resorts p,,,,,,True
-Apple Pty Ltd,2031.0,apple pty ltd,apple,IT,General Ops,Hardware and device purchases,Optimize costs,R034,False
-Slack Technologies Limited,1989.0,slack technologies limited,slack technologies,IT,Productivity/Collab,Team messaging and collaboration platform,Consolidate,R013,False
+Apple Pty Ltd,2031.0,apple pty ltd,apple,G&A,General Ops,Hardware and device purchases,Optimize costs,R034,False
+Slack Technologies Limited,1989.0,slack technologies limited,slack technologies,SaaS,Productivity/Collab,Team messaging and collaboration platform,Consolidate,R013,False
 G S Notary Public Limited,1935.0,g s notary public limited,g s notary public,,,,,,True
-Apple Distribution International Ltd,1913.0,apple distribution international ltd,apple distribution international,IT,General Ops,Hardware and device purchases,Optimize costs,R034,False
+Apple Distribution International Ltd,1913.0,apple distribution international ltd,apple distribution international,G&A,General Ops,Hardware and device purchases,Optimize costs,R034,False
 Porezno Savjetniå¡Tvo Tuk D.O.O.,1813.0,porezno savjetni tvo tuk d.o.o.,porezno savjetni tvo tuk,,,,,,True
 Susan Lee,1762.0,susan lee,susan lee,,,,,,True
 Ansar Madovic,1732.0,ansar madovic,ansar madovic,,,,,,True
@@ -191,7 +191,7 @@ Radisson Grt - Unit Of Hotels & Resorts Pvt Ltd,1406.0,radisson grt - unit of ho
 Ariba Inc,1363.0,ariba inc,ariba,,,,,,True
 Chamiers Recreation Club,1338.0,chamiers recreation club,chamiers recreation club,,,,,,True
 Quadrant Law Llc,1327.0,quadrant law llc,quadrant law,Legal,Legal Services,Legal counsel and advisory services,Consolidate,R010,False
-Docusign,1308.0,docusign,docusign,Operations,Productivity/Collab,Electronic signature and document management,Optimize costs,R024,False
+Docusign,1308.0,docusign,docusign,SaaS,Productivity/Collab,Electronic signature and document management,Optimize costs,R024,False
 Inside Edge Novated Leasing,1287.0,inside edge novated leasing,inside edge novated leasing,,,,,,True
 Rhea D.O.O.,1253.0,rhea d.o.o.,rhea,,,,,,True
 P S Recreation Club,1219.0,p s recreation club,p s recreation club,,,,,,True
@@ -209,7 +209,7 @@ Lunch Nutrition D.O.O.,1012.0,lunch nutrition d.o.o.,lunch nutrition,,,,,,True
 Winmaxi Tours & Travels,1001.0,winmaxi tours & travels,winmaxi tours & travels,,,,,,True
 Digitalna Produkcija J.D.O.O.,993.0,digitalna produkcija j.d.o.o.,digitalna produkcija,,,,,,True
 Computershare-Caboodle Technology Limited,981.0,computershare-caboodle technology limited,computershare-caboodle technology,,,,,,True
-Allianz Wa,971.0,allianz wa,allianz wa,HR,General Ops,Employee health and insurance benefits,Consolidate,R025,False
+Allianz Wa,971.0,allianz wa,allianz wa,G&A,General Ops,Employee health and insurance benefits,Consolidate,R025,False
 Trending Technology Services Gmbh,961.0,trending technology services gmbh,trending technology services,,,,,,True
 "Godaddy.Com, Llc",923.0,"godaddy.com, llc",godaddy.com,,,,,,True
 Time Out Group,920.0,time out group,time out group,,,,,,True
@@ -226,7 +226,7 @@ Potomac D.O.O.,806.0,potomac d.o.o.,potomac,,,,,,True
 "President Hotel And Tower Co., Ltd",803.0,"president hotel and tower co., ltd",president hotel and tower,,,,,,True
 Friends Sports Club,797.0,friends sports club,friends sports club,,,,,,True
 The Cycle Gap Adyar,765.0,the cycle gap adyar,the cycle gap adyar,,,,,,True
-Apple - Amer,764.0,apple - amer,apple - amer,IT,General Ops,Hardware and device purchases,Optimize costs,R034,False
+Apple - Amer,764.0,apple - amer,apple - amer,G&A,General Ops,Hardware and device purchases,Optimize costs,R034,False
 Klg - Kalra Legal Group,681.0,klg - kalra legal group,klg - kalra legal group,Legal,Legal Services,Legal counsel and advisory services,Consolidate,R010,False
 Kilgannon & Partners Llp,681.0,kilgannon & partners llp,kilgannon & partners,,,,,,True
 Uk Postbox Limited,670.0,uk postbox limited,uk postbox,,,,,,True
@@ -285,7 +285,7 @@ National Securities Depository Limited(Nsdl),281.0,national securities depositor
 Adamma Info Services Private Limited,273.0,adamma info services private limited,adamma info services private,,,,,,True
 The Riding House Cafe,265.0,the riding house cafe,the riding house cafe,,,,,,True
 Stillmark Zagreb D.O.O.,263.0,stillmark zagreb d.o.o.,stillmark zagreb,,,,,,True
-Lastpass Ireland Limited,263.0,lastpass ireland limited,lastpass ireland,IT,Security/IT Ops,Password management and security tool,Consolidate,R031,False
+Lastpass Ireland Limited,263.0,lastpass ireland limited,lastpass ireland,G&A,Security/IT Ops,Password management and security tool,Consolidate,R031,False
 Taste Of Health,259.0,taste of health,taste of health,,,,,,True
 Infodata,241.0,infodata,infodata,,,,,,True
 Amazon (Aus),233.0,amazon (aus),amazon,,,,,,True
@@ -307,7 +307,7 @@ Zettanet,183.0,zettanet,zettanet,,,,,,True
 Hahn Air,183.0,hahn air,hahn air,,,,,,True
 Vitality Works,182.0,vitality works,vitality works,,,,,,True
 Avoxi Inc,178.0,avoxi inc,avoxi,,,,,,True
-Zapier Inc.,167.0,zapier inc.,zapier,IT,Productivity/Collab,Workflow automation and app integration,Consolidate,R033,False
+Zapier Inc.,167.0,zapier inc.,zapier,SaaS,Productivity/Collab,Workflow automation and app integration,Consolidate,R033,False
 "Solarwinds, Inc",166.0,"solarwinds, inc",solarwinds,,,,,,True
 Xenon Savjetovanje D.O.O.,164.0,xenon savjetovanje d.o.o.,xenon savjetovanje,,,,,,True
 Floom Ltd,162.0,floom ltd,floom,,,,,,True

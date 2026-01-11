@@ -19,8 +19,8 @@ class PrefillRulesEngine:
     """Engine to apply prefill rules to vendor data."""
 
     ALLOWED_DEPARTMENTS = [
-        'Engineering', 'Sales', 'Marketing', 'Finance', 'HR', 'Operations',
-        'Product', 'Legal', 'Customer Success', 'IT', 'Executive', 'Facilities'
+        'Engineering', 'Facilities', 'G&A', 'Legal', 'M&A', 'Marketing',
+        'SaaS', 'Product', 'Professional Services', 'Sales', 'Support', 'Finance'
     ]
 
     ALLOWED_SUGGESTIONS = ['Consolidate', 'Terminate', 'Optimize costs']

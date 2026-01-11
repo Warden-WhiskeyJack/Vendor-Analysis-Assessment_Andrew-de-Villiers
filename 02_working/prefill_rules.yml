@@ -17,20 +17,20 @@ categories:
   - General Ops
   - Other
 
-# Allowed Departments (12 total)
+# Allowed Departments (12 total - from 00_admin/01_department_rubric.md)
 departments:
   - Engineering
-  - Sales
-  - Marketing
-  - Finance
-  - HR
-  - Operations
-  - Product
-  - Legal
-  - Customer Success
-  - IT
-  - Executive
   - Facilities
+  - G&A
+  - Legal
+  - M&A
+  - Marketing
+  - SaaS
+  - Product
+  - Professional Services
+  - Sales
+  - Support
+  - Finance
 
 # Prefill Rules
 rules:
@@ -55,7 +55,7 @@ rules:
   - id: R003
     match_type: regex
     pattern: (amazon web services|aws)
-    department: IT
+    department: Engineering
     category: Cloud
     description_template: Cloud infrastructure and computing services
     suggestion: Optimize costs
@@ -64,7 +64,7 @@ rules:
   - id: R004
     match_type: contains
     pattern: microsoft
-    department: IT
+    department: SaaS
     category: Productivity/Collab
     description_template: Office productivity and collaboration suite
     suggestion: Consolidate
@@ -73,7 +73,7 @@ rules:
   - id: R005
     match_type: contains
     pattern: google
-    department: IT
+    department: SaaS
     category: Productivity/Collab
     description_template: Workspace collaboration and productivity tools
     suggestion: Consolidate
@@ -100,7 +100,7 @@ rules:
   - id: R008
     match_type: regex
     pattern: (telefonica|telekom|t-mobile|vodafone|starhub)
-    department: IT
+    department: G&A
     category: Telecom
     description_template: Telecommunications and mobile services
     suggestion: Consolidate
@@ -109,7 +109,7 @@ rules:
   - id: R009
     match_type: regex
     pattern: (bdo|rsm|grant thornton|pwc|pricewaterhouse|crowe horwath)
-    department: Finance
+    department: Professional Services
     category: Audit/Tax
     description_template: Audit tax and financial advisory services
     suggestion: Consolidate
@@ -127,7 +127,7 @@ rules:
   - id: R011
     match_type: regex
     pattern: (recruitment|recruiting|mason frank|cedar recruitment)
-    department: HR
+    department: G&A
     category: Recruiting
     description_template: Talent acquisition and recruitment services
     suggestion: Consolidate
@@ -145,7 +145,7 @@ rules:
   - id: R013
     match_type: contains
     pattern: slack
-    department: IT
+    department: SaaS
     category: Productivity/Collab
     description_template: Team messaging and collaboration platform
     suggestion: Consolidate
@@ -226,7 +226,7 @@ rules:
   - id: R022
     match_type: regex
     pattern: (infosys|cloud technology solutions)
-    department: IT
+    department: G&A
     category: Security/IT Ops
     description_template: IT consulting and managed services
     suggestion: Optimize costs
@@ -235,7 +235,7 @@ rules:
   - id: R023
     match_type: contains
     pattern: smartsheet
-    department: Operations
+    department: SaaS
     category: Productivity/Collab
     description_template: Work management and collaboration platform
     suggestion: Consolidate
@@ -244,7 +244,7 @@ rules:
   - id: R024
     match_type: contains
     pattern: docusign
-    department: Operations
+    department: SaaS
     category: Productivity/Collab
     description_template: Electronic signature and document management
     suggestion: Optimize costs
@@ -253,7 +253,7 @@ rules:
   - id: R025
     match_type: regex
     pattern: (insurance|aetna|bupa|allianz|cigna)
-    department: HR
+    department: G&A
     category: General Ops
     description_template: Employee health and insurance benefits
     suggestion: Consolidate
@@ -262,7 +262,7 @@ rules:
   - id: R026
     match_type: contains
     pattern: workato
-    department: IT
+    department: SaaS
     category: Productivity/Collab
     description_template: Integration and workflow automation platform
     suggestion: Optimize costs
@@ -307,7 +307,7 @@ rules:
   - id: R031
     match_type: contains
     pattern: lastpass
-    department: IT
+    department: G&A
     category: Security/IT Ops
     description_template: Password management and security tool
     suggestion: Consolidate
@@ -325,7 +325,7 @@ rules:
   - id: R033
     match_type: contains
     pattern: zapier
-    department: IT
+    department: SaaS
     category: Productivity/Collab
     description_template: Workflow automation and app integration
     suggestion: Consolidate
@@ -334,7 +334,7 @@ rules:
   - id: R034
     match_type: contains
     pattern: apple
-    department: IT
+    department: G&A
     category: General Ops
     description_template: Hardware and device purchases
     suggestion: Optimize costs
