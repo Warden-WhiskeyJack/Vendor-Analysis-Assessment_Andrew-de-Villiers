@@ -37,7 +37,7 @@ The hiring manager will evaluate (1) your ability to use Claude Code effectively
 We will not accept submissions from other AI tools.
 It is highly recommended to have a README file that explains how you did everything.
 
-Part 2: Identify Strategic Opportunities
+* Part 2: Identify Strategic Opportunities
 In the Top 3 Opportunities tab, outline:
 The three highest-impact recommendations based on vendor data
 Each should include:
@@ -45,20 +45,20 @@ A summary title (e.g., "CRM Tool Consolidation")
 A brief explanation
 An estimated annual savings in USD
 
-Part 3: Summarize Methodology
+* Part 3: Summarize Methodology
 In the Methodology tab, describe:
 How you approached the task
 Which tools you used
 Prompts you created
 How you validated and quality-checked your work
 
-Part 4: Executive Memo
+* Part 4: Executive Memo
 On the Recommendations tab, write a 1-page executive memo:
 Audience: CEO and CFO
 Clearly summarize your findings and key savings opportunities
 Ensure it is clear, actionable, and aligned with C-level decision-making expectations
 
-Submit Your Work
+* Submit Your Work
 Paste the view-only Google Sheets link into the submission field
 Double-check that permissions are set to "Anyone with the link can view"
 Question Title
