@@ -1,0 +1,8 @@
+batch_id,input_file,row_start,row_end,vendor_count,total_spend
+batch_001,batch_001_input.csv,1,50,50,1833768.00
+batch_002,batch_002_input.csv,51,100,50,226139.00
+batch_003,batch_003_input.csv,101,150,50,82101.00
+batch_004,batch_004_input.csv,151,200,50,30053.00
+batch_005,batch_005_input.csv,201,250,50,11302.00
+batch_006,batch_006_input.csv,251,300,50,3913.00
+batch_007,batch_007_input.csv,301,309,9,202.00
