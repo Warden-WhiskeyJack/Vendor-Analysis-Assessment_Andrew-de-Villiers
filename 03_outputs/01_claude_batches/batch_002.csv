@@ -1,0 +1,51 @@
+vendor_name_raw,spend_usd,department,category,description_1l,suggestion,confidence,rationale_short,suspected_duplicates
+Studentski Centar - Split,8269.0,G&A,Recruiting,Student center in Split for recruiting and internships,Consolidate,Medium,Multiple recruiting vendors suggest consolidation,Hrsolution International Ag;Info Edge India Limited;Crossland
+The Guardian,8070.0,Marketing,Marketing/SEO/PR,Newspaper advertising for employer branding or job postings,Optimize costs,High,Media spend should show recruitment ROI,
+Intertrust Singapore Corporate Services Pte Ltd - Csc,7360.0,Finance,Audit/Tax,Corporate secretarial and entity management services,Optimize costs,High,Corporate services should align with entity count,Acclime Corporate Services;Acclime Usa
+Goto Technologies Uk Limited,7316.0,Engineering,Productivity/Collab,Remote meeting and collaboration software platform,Optimize costs,High,Collaboration tool spend should match usage,
+Hrsolution International Ag,6987.0,G&A,Recruiting,HR solutions and recruiting services,Consolidate,High,Duplicate with Hr Solution International Gmbh from batch 001,Studentski Centar - Split;Info Edge India Limited;Crossland
+Obrt Sjaj Sunca,6596.0,Facilities,General Ops,Croatian sole proprietorship for business services,Optimize costs,Low,Unclear vendor type requires investigation,
+Telefã³Nica Compras Electrã³Nicas S.L.,6157.0,Engineering,Telecom,Spanish telecommunications and network services,Optimize costs,High,Telecom costs should be competitively reviewed,Telemach Hrvatska D.O.O.
+Icici Lombard Gic Ltd,5972.0,G&A,General Ops,Indian general insurance provider for employees,Optimize costs,High,Insurance should be annually bid for best rates,
+Mosaic Concept D.O.O.,5731.0,Professional Services,General Ops,Croatian business consulting and services,Optimize costs,Low,Unclear scope requires investigation,Limes Plus D.O.O.;Orcola D.O.O.;Akton D.O.O.
+Limes Plus D.O.O.,5624.0,Professional Services,General Ops,Croatian professional services provider,Consolidate,Low,Multiple Croatian service providers suggest consolidation,Mosaic Concept D.O.O.;Orcola D.O.O.;Akton D.O.O.
+Mercer Limited,5444.0,G&A,General Ops,HR consulting and employee benefits advisory,Optimize costs,High,Benefits consulting should be project-based,
+Acclime Corporate Services,5413.0,Finance,Audit/Tax,Corporate services and entity compliance management,Consolidate,High,Duplicate with Acclime Usa Inc,Acclime Usa;Intertrust Singapore Corporate Services Pte Ltd - Csc
+Green Commute Initiative,5402.0,G&A,General Ops,Employee bike-to-work and sustainable commute scheme,Optimize costs,Medium,Employee benefit should show utilization rates,
+Tattu Manchester Limited,5366.0,G&A,General Ops,Restaurant for corporate events and client entertainment,Consolidate,High,Multiple venue vendors suggest consolidation,Inter Continental Chennai Mahabalipuram Resort;Puducherry Backwater Resort Private Limited;Calm Achiever(A Unit Of Mohsin Ali Vakil);Trocadero (London) Hotel Ltd
+Athlete Service Ltd,5285.0,G&A,General Ops,Wellness or fitness services for employees,Optimize costs,Low,Unclear service type requires scope review,
+Telemach Hrvatska D.O.O.,5134.0,Engineering,Telecom,Croatian telecommunications and internet services,Consolidate,High,Second telecom vendor suggests consolidation,Telefã³Nica Compras Electrã³Nicas S.L.
+"Acclime Usa, Inc",4995.0,Finance,Audit/Tax,US entity for corporate services and compliance,Consolidate,High,Clear duplicate of Acclime Corporate Services,Acclime Corporate Services;Intertrust Singapore Corporate Services Pte Ltd - Csc
+Centar Za Sigurnost D.O.O.,4991.0,Engineering,Security/IT Ops,Croatian security center for IT security services,Optimize costs,Medium,Security services should align with threat needs,
+Profi Bar D.O.O.,4917.0,Facilities,General Ops,Croatian bar or catering for office services,Optimize costs,Medium,Office catering should be usage-based,Zivi Napitak D.O.O.
+Pinnacle Partnership Ca,4836.0,Professional Services,General Ops,Professional services and business consulting,Optimize costs,Low,Generic consulting requires scope clarification,
+Australian Payroll Professionals Pty Ltd,4399.0,Finance,Finance Systems,Payroll processing and administration services,Optimize costs,High,Payroll services should be per-employee pricing,
+Inter Continental Chennai Mahabalipuram Resort,4393.0,G&A,General Ops,Hotel and resort for corporate events and offsites,Consolidate,High,Multiple hotel venues suggest consolidation,Tattu Manchester Limited;Puducherry Backwater Resort Private Limited;Calm Achiever(A Unit Of Mohsin Ali Vakil);Trocadero (London) Hotel Ltd
+Puducherry Backwater Resort Private Limited,4056.0,G&A,General Ops,Indian resort for corporate offsites and events,Consolidate,High,Third venue vendor confirms consolidation need,Tattu Manchester Limited;Inter Continental Chennai Mahabalipuram Resort;Calm Achiever(A Unit Of Mohsin Ali Vakil);Trocadero (London) Hotel Ltd
+Orionw Llc,4025.0,Professional Services,General Ops,Professional services and consulting,Optimize costs,Low,Unclear vendor requires investigation,
+Hep Elektra D.O.O.,3735.0,Facilities,General Ops,Croatian electricity utility provider,Optimize costs,High,Utility costs are generally non-negotiable,
+Zivi Napitak D.O.O.,3700.0,Facilities,General Ops,Croatian beverage supplier for office,Consolidate,Medium,Beverage supplier could consolidate with catering,Profi Bar D.O.O.
+Gym4You D.O.O.,3692.0,G&A,General Ops,Croatian gym membership for employee wellness,Optimize costs,High,Gym benefit should show employee utilization,
+Aha! Labs Inc,3689.0,Product,Product/Design,Product roadmap and strategy management software,Optimize costs,High,Product management tool should align with team size,
+"Kryterion, Inc.",3541.0,G&A,Productivity/Collab,Testing and assessment platform for certifications,Optimize costs,Medium,Assessment platform spend should match usage,
+Npm Inc,3535.0,Engineering,Security/IT Ops,NPM package registry for JavaScript development,Optimize costs,High,NPM enterprise should align with developer count,
+Pinsent Masons Mpillay Llp,4078.0,Legal,Legal Services,International law firm for legal advisory,Optimize costs,High,Legal services should be usage-based,
+Calm Achiever(A Unit Of Mohsin Ali Vakil),4071.0,G&A,General Ops,Indian hotel or venue for corporate events,Consolidate,Medium,Fourth venue vendor confirms excessive fragmentation,Tattu Manchester Limited;Inter Continental Chennai Mahabalipuram Resort;Puducherry Backwater Resort Private Limited;Trocadero (London) Hotel Ltd
+Pluxee India Private Limited,3994.0,G&A,General Ops,Employee benefits platform formerly Sodexo benefits,Optimize costs,High,Benefits platform should align with employee count,
+Papertrail Inc,3900.0,Engineering,Security/IT Ops,Cloud-based log management and monitoring,Optimize costs,High,Log management should match infrastructure scale,
+Sniper Systems And Solutions Private Limited,3899.0,Engineering,Security/IT Ops,IT solutions and systems integration services,Optimize costs,Medium,IT services should deliver measurable outcomes,
+Trocadero (London) Hotel Ltd,3868.0,G&A,General Ops,London hotel for corporate events and accommodation,Consolidate,High,Fifth venue vendor indicates clear consolidation need,Tattu Manchester Limited;Inter Continental Chennai Mahabalipuram Resort;Puducherry Backwater Resort Private Limited;Calm Achiever(A Unit Of Mohsin Ali Vakil)
+Ikea Hrvatska D.O.O.,3610.0,Facilities,Coworking/Office,IKEA Croatia for office furniture and supplies,Optimize costs,High,Furniture spend should be one-time or periodic,
+Orcola D.O.O.,3545.0,Professional Services,General Ops,Croatian professional services provider,Consolidate,Low,Multiple Croatian service vendors suggest consolidation,Mosaic Concept D.O.O.;Limes Plus D.O.O.;Akton D.O.O.
+Info Edge India Limited,3536.0,G&A,Recruiting,Parent company of Naukri.com for job postings,Consolidate,High,Fourth recruiting vendor confirms consolidation need,Studentski Centar - Split;Hrsolution International Ag;Crossland
+Grad Split,3483.0,Facilities,General Ops,City of Split government fees and permits,Optimize costs,High,Government fees typically non-negotiable,
+Akton D.O.O.,3254.0,Professional Services,General Ops,Croatian business services provider,Consolidate,Low,Fourth Croatian service vendor confirms fragmentation,Mosaic Concept D.O.O.;Limes Plus D.O.O.;Orcola D.O.O.
+Bureau Veritas Croatia D.O.O.,3200.0,Professional Services,General Ops,Testing inspection and certification services,Optimize costs,High,Certification services should be project-based,
+Ncc Services Limited,3036.0,Professional Services,General Ops,Professional services and consulting,Optimize costs,Low,Unclear vendor requires scope investigation,
+Good Game Global D.O.O.,2954.0,Professional Services,General Ops,Croatian business services provider,Optimize costs,Low,Unclear vendor requires investigation,
+Garaå¾A Firule D.O.O.,2930.0,Facilities,General Ops,Croatian parking garage services,Optimize costs,Medium,Parking fees should align with office location,
+Crossland,2924.0,G&A,Recruiting,Employment and recruiting services,Consolidate,High,Fifth recruiting vendor indicates excessive fragmentation,Studentski Centar - Split;Hrsolution International Ag;Info Edge India Limited
+It London,2838.0,Engineering,Security/IT Ops,IT services and technology consulting,Optimize costs,Low,Unclear IT services require scope definition,
+Terrapinn Holdings Ltd,2838.0,Marketing,Marketing/SEO/PR,Business event management and conferences,Optimize costs,High,Event sponsorships should show lead generation ROI,
+Elemental Life Solutions Llp,2807.0,G&A,General Ops,Employee wellness and insurance solutions,Optimize costs,Medium,Wellness services should demonstrate engagement,
+United Flow Ltd (The Goodness Project),2744.0,G&A,General Ops,Employee wellness and social impact programs,Terminate,Medium,Wellness programs should justify ROI or terminate,
