@@ -12,7 +12,7 @@ Each batch should be appended to the table below after processing completes.
 | Batch ID | Input File | Output File | Row Range | Vendor Count | Total Spend | High Conf | Med Conf | Low Conf | Duplicates | Status | Notes |
 |----------|------------|-------------|-----------|--------------|-------------|-----------|----------|----------|------------|--------|-------|
 | batch_001 | batch_001_input.csv | batch_001_output.csv | 1-50 | 50 | $1,833,768 | 45 | 4 | 1 | 0 | ✅ Complete | No issues |
-| batch_002 | batch_002_input.csv | batch_002_output.csv | 51-100 | 50 | $226,139 | 48 | 2 | 0 | 0 | ✅ Complete | |
+| batch_002 | batch_002_input.csv | batch_002.csv | 51-100 | 50 | $226,139 | 33 | 11 | 6 | 18 | ✅ Complete | See detailed entry below |
 
 ---
 
@@ -77,3 +77,34 @@ Each batch should be appended to the table below after processing completes.
 - **M&A advisory overlap:** Three M&A advisors may indicate deal-specific engagements or redundant relationships worth reviewing
 - **Generic consulting services:** Multiple "business services" and "consulting" vendors with vague scopes (Harmonic Group, Shoff Darby, Emerge Development) require deeper investigation to validate necessity
 - **Facilities management:** Both JLL and CBRE present suggest possible overlap in real estate/facilities services that could be consolidated
+
+---
+
+### Batch 002 - Detailed Entry
+
+**Input File:** `02_working/01_batches/batch_002_input.csv`
+**Output File:** `03_outputs/01_claude_batches/batch_002.csv`
+**Row Range:** 51-100 (from batch_manifest.csv)
+**Vendor Count:** 50
+**Total Spend:** $226,139.00
+
+**Confidence Distribution:**
+- High: 33 vendors (66%)
+- Medium: 11 vendors (22%)
+- Low: 6 vendors (12%)
+
+**Suspected Duplicates:** 18 rows flagged with potential duplicates
+
+**Example Duplicate Groups:**
+1. **Corporate Services Consolidation:** Intertrust Singapore, Acclime Corporate Services, Acclime USA (3 vendors, $17,768 combined - Acclime has 2 entities)
+2. **HR/Payroll Service Overlap:** Hrsolution International, Mercer Limited, Australian Payroll Professionals, Elemental Life Solutions (4 vendors, $19,637 combined)
+3. **Telecom Providers:** Telefónica Compras (Spain), Telemach Hrvatska (Croatia) (2 vendors, $11,291 combined)
+4. **Travel & Hospitality:** Inter Continental Chennai, Puducherry Backwater Resort, Trocadero London Hotel, Tattu Manchester (4 vendors, $17,683 combined)
+5. **Wellness/Gym Facilities:** Athlete Service Ltd, Gym4You D.O.O. (2 vendors, $8,977 combined)
+
+**Classification Notes and Assumptions:**
+- **Croatian D.O.O. entities:** Six low-confidence vendors due to ambiguous business names (Obrt Sjaj Sunca, Mosaic Concept, Limes Plus, Orcola, Akton) - likely facilities or business services but require validation
+- **Travel & Expense policy gaps:** Four separate hotels/restaurants totaling $17,683 suggest lack of T&E controls or preferred vendor agreements; consolidation opportunity with corporate travel management
+- **HR services fragmentation:** Four distinct HR/payroll vendors across different regions indicate geographic requirements but potential for global vendor consolidation
+- **Acclime duplicate entities:** Acclime Corporate Services and Acclime USA appear to be same organization with regional entities - should consolidate billing and relationship management
+- **Professional services ambiguity:** Three vendors with unclear service types (Pinnacle Partnership CA, Orionw LLC, Calm Achiever, United Flow/Goodness Project) marked for termination review due to vague value proposition
