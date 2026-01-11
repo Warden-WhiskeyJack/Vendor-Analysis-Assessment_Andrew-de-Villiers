@@ -1,0 +1,51 @@
+vendor_name_raw,spend_usd,department,category,description_1l,suggestion,confidence,rationale_short,suspected_duplicates
+(Blank),137.0,G&A,General Ops,Unidentified expense with missing vendor name,Terminate,Low,Missing vendor identification; requires investigation,
+Escape Art D.O.O.,133.0,G&A,General Ops,Team building or entertainment service provider,Terminate,Medium,One-time event expense; non-recurring need,
+Fero-Term,131.0,Facilities,General Ops,Facilities or HVAC services provider,Optimize costs,Low,Unclear business type; validate necessity,
+Ustanova Za Zdravstvenu Skrb P.P.,131.0,G&A,General Ops,Healthcare services or clinic in Croatia,Optimize costs,Medium,Employee healthcare; evaluate alternative providers,
+Vistaprint,130.0,Marketing,Marketing/SEO/PR,Online printing and marketing materials provider,Consolidate,High,Consolidate with other print vendors,Vistaprint;Snappy Snaps;Kall Kwik Centre 565
+Teb Poslovno Savjetovanje D.O.O.,129.0,Professional Services,Professional Services,Business consulting services in Croatia,Terminate,Medium,Unclear scope and value; review necessity,
+Illunis D.O.O.,128.0,G&A,General Ops,Unclear business services provider,Terminate,Low,Vague vendor purpose; validate ongoing need,
+Australian Taxation Office (Ato),123.0,Finance,Audit/Tax,Government tax payment for Australian operations,Optimize costs,High,Mandatory compliance payment; optimize tax strategy,
+Capitol Services,120.0,G&A,General Ops,Business or facilities services provider,Terminate,Low,Unclear service type; review necessity,
+Bonus Opinio D.O.O.,120.0,G&A,General Ops,Croatian business services provider,Terminate,Low,Vague vendor purpose; validate necessity,
+Dhl Express (Uk) Ltd,119.0,G&A,General Ops,International courier and shipping services,Consolidate,High,Consolidate with other courier services,Dhl Express (Uk) Ltd;Fedex Express Uk Transportation Ltd;Gophr
+Fortis Trade J.D.O.O.,95.0,G&A,General Ops,Croatian trade or retail supplier,Terminate,Low,Unclear business type; validate necessity,
+Till Trade D.O.O.,93.0,G&A,General Ops,Croatian trade or retail supplier,Terminate,Low,Unclear business purpose; review need,
+Pret A Manger,92.0,G&A,Travel & Expense,Food and beverage restaurant chain,Consolidate,High,Enforce T&E policy; consolidate meal expenses,"Pret A Manger;Axil Coffee Roasters;Wolt Enterprises Oy;Uber *Eats;Istra Wine;Pan-Pek D.O.O.;Cupcake Central (Life Is Sweet Bakery)"
+Axil Coffee Roasters,89.0,G&A,Travel & Expense,Specialty coffee shop for meals and beverages,Consolidate,High,Enforce T&E policy; use meal allowances,"Pret A Manger;Axil Coffee Roasters;Wolt Enterprises Oy;Uber *Eats;Istra Wine;Pan-Pek D.O.O.;Cupcake Central (Life Is Sweet Bakery)"
+Pepco Croatia D.O.O.,89.0,G&A,General Ops,Discount retail store for office supplies,Optimize costs,Medium,Consolidate with primary office supplier,
+Lemia D.O.O.,88.0,G&A,General Ops,Croatian business services provider,Terminate,Low,Unclear business type; validate necessity,
+Retriever Llc,88.0,G&A,General Ops,Business services or data provider,Terminate,Low,Unclear service type; review necessity,
+Meluba Limited,88.0,G&A,General Ops,Unclear business services provider,Terminate,Low,Vague vendor purpose; validate need,
+London Waste Management,86.0,Facilities,Coworking/Office,Waste collection and disposal services,Optimize costs,High,Essential service; negotiate better rates,
+Hilton Garden Inn - Zagreb City Hotels D.O.O.,82.0,G&A,Travel & Expense,Hotel accommodation for business travel,Optimize costs,High,Negotiate corporate rates or use TMC,
+Lider Media D.O.O.,80.0,Marketing,Marketing/SEO/PR,Croatian media and advertising services,Optimize costs,Medium,Review campaign effectiveness and ROI,
+Uptime Robot Service Provider Ltd,78.0,Engineering,Security/IT Ops,Website and server uptime monitoring SaaS,Optimize costs,High,Review license usage and alternatives,
+Mithras Consultants,77.0,Professional Services,Professional Services,Business consulting services,Terminate,Medium,Unclear scope and value delivery,
+6Sense Insights Inc,76.0,Marketing,Marketing/SEO/PR,B2B marketing intelligence and intent data platform,Optimize costs,High,Review license utilization and ROI,
+Ico,67.0,Legal,Legal Services,Compliance or regulatory services,Terminate,Low,Unclear service; validate necessity,
+Sportska Udruga Split,66.0,G&A,General Ops,Croatian sports association membership or event,Terminate,Medium,Non-essential expense; discontinue membership,
+Prezzee,64.0,G&A,General Ops,Digital gift card platform for rewards,Optimize costs,Medium,Review gifting policy and alternatives,
+Inet Telecoms Ltd.,63.0,G&A,Telecom,Telecommunications and internet services,Optimize costs,High,Review contract and negotiate rates,
+Wolt Enterprises Oy,62.0,G&A,Travel & Expense,Food delivery platform for meals,Consolidate,High,Enforce T&E policy; use meal allowances,"Pret A Manger;Axil Coffee Roasters;Wolt Enterprises Oy;Uber *Eats;Istra Wine;Pan-Pek D.O.O.;Cupcake Central (Life Is Sweet Bakery)"
+Platinum Office D.O.O.,62.0,Facilities,Coworking/Office,Office services or supplies in Croatia,Optimize costs,Medium,Consolidate with primary office vendor,
+Snappy Snaps,59.0,Marketing,Marketing/SEO/PR,Photo printing and processing services,Consolidate,Medium,Consolidate with other print vendors,Vistaprint;Snappy Snaps;Kall Kwik Centre 565
+New Block D.O.O.,56.0,G&A,General Ops,Croatian business services provider,Terminate,Low,Unclear business purpose; validate need,
+Cayman Islands Government,56.0,Legal,Legal Services,Government registration or compliance fees,Optimize costs,High,Mandatory regulatory payment; review structure,
+Officeworks,56.0,G&A,General Ops,Office supplies and stationery retailer,Optimize costs,High,Consolidate with primary supplier; negotiate rates,
+Click Send Pty Ltd,55.0,Engineering,Productivity/Collab,SMS and communication API platform,Optimize costs,High,Review usage and alternative providers,
+Kall Kwik Centre 565,55.0,G&A,General Ops,Printing and copy shop services,Consolidate,Medium,Consolidate with other print vendors,Vistaprint;Snappy Snaps;Kall Kwik Centre 565
+Shilton Hospitality Llp,55.0,G&A,Travel & Expense,Hospitality or catering services,Optimize costs,Medium,Review expense policy and alternatives,
+Axosoft Gitkraken,54.0,Engineering,Productivity/Collab,Git client and version control tool,Optimize costs,High,Review license count and utilization,
+Istra Wine,53.0,G&A,Travel & Expense,Wine retailer for gifts or events,Consolidate,Medium,Consolidate meal and beverage expenses,"Pret A Manger;Axil Coffee Roasters;Wolt Enterprises Oy;Uber *Eats;Istra Wine;Pan-Pek D.O.O.;Cupcake Central (Life Is Sweet Bakery)"
+Gophr,52.0,G&A,General Ops,On-demand courier and delivery service,Consolidate,Medium,Consolidate with primary courier vendors,Dhl Express (Uk) Ltd;Fedex Express Uk Transportation Ltd;Gophr
+Pan-Pek D.O.O.,50.0,G&A,Travel & Expense,Croatian bakery or food supplier,Consolidate,Low,Consolidate meal expenses; enforce policy,"Pret A Manger;Axil Coffee Roasters;Wolt Enterprises Oy;Uber *Eats;Istra Wine;Pan-Pek D.O.O.;Cupcake Central (Life Is Sweet Bakery)"
+Uber *Eats,50.0,G&A,Travel & Expense,Food delivery platform for meals,Consolidate,High,Enforce T&E policy; use meal allowances,"Pret A Manger;Axil Coffee Roasters;Wolt Enterprises Oy;Uber *Eats;Istra Wine;Pan-Pek D.O.O.;Cupcake Central (Life Is Sweet Bakery)"
+Fedex Express Uk Transportation Ltd,47.0,G&A,General Ops,International courier and shipping services,Consolidate,High,Consolidate with primary courier vendor,Dhl Express (Uk) Ltd;Fedex Express Uk Transportation Ltd;Gophr
+Garden City D.O.O.,45.0,G&A,General Ops,Croatian facilities or retail services,Terminate,Low,Unclear business type; validate necessity,
+Livingstone,41.0,Professional Services,Professional Services,Consulting or recruitment services,Terminate,Low,Vague vendor; unclear value proposition,
+Ekupi D.O.O.,40.0,G&A,General Ops,Croatian retail chain for supplies,Optimize costs,Medium,Consolidate with primary supplier,
+Farmacia - Specijalizirana Prodavaonica D.O.O.,36.0,G&A,General Ops,Croatian pharmacy for employee needs,Optimize costs,Medium,Review employee healthcare benefits plan,
+Cupcake Central (Life Is Sweet Bakery),35.0,G&A,Travel & Expense,Bakery for events or catering,Consolidate,Medium,Consolidate meal expenses; one-time vendor,"Pret A Manger;Axil Coffee Roasters;Wolt Enterprises Oy;Uber *Eats;Istra Wine;Pan-Pek D.O.O.;Cupcake Central (Life Is Sweet Bakery)"
+Post Office Ltd,32.0,G&A,General Ops,Postal and mailing services,Optimize costs,High,Essential service; consolidate with courier vendors,

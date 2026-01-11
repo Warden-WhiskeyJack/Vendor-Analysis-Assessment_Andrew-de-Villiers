@@ -50,6 +50,7 @@ Each batch should be appended to the table below after processing completes.
 | batch_003 | batch_003_input.csv | batch_003.csv | 101-150 | 50 | $82,101 | 24 | 22 | 4 | 14 | ✅ Complete | See detailed entry below |
 | batch_004 | batch_004_input.csv | batch_004.csv | 151-200 | 50 | $30,053 | 24 | 14 | 12 | 27 | ✅ Complete | See detailed entry below |
 | batch_005 | batch_005_input.csv | batch_005.csv | 201-250 | 50 | $11,302 | 29 | 16 | 5 | 32 | ✅ Complete | See detailed entry below |
+| batch_006 | batch_006_input.csv | batch_006.csv | 251-300 | 50 | $3,913 | 18 | 17 | 15 | 13 | ✅ Complete | See detailed entry below |
 
 ---
 
@@ -204,3 +205,32 @@ Each batch should be appended to the table below after processing completes.
 - **Retail & personal purchases:** Multiple retail vendors (Spar supermarket, Amazon, Notino cosmetics, Regency Hampers) totaling $983 suggest procurement policy gaps allowing personal/discretionary purchases
 - **Learning platform overlap:** Both Pluralsight and Interaction Design Foundation provide online training; consolidation opportunity to reduce duplicate subscriptions and negotiate volume pricing
 - **Travel & Expense policy gaps:** Hotel and restaurant spend across 8 vendors ($1,395 combined) without clear preferred vendor agreements indicates need for corporate T&E management and policy enforcement
+
+---
+
+### Batch 006 - Detailed Entry
+
+**Input File:** `02_working/01_batches/batch_006_input.csv`
+**Output File:** `03_outputs/01_claude_batches/batch_006.csv`
+**Row Range:** 251-300 (from batch_manifest.csv)
+**Vendor Count:** 50
+**Total Spend:** $3,913.00
+
+**Confidence Distribution:**
+- High: 18 vendors (36%)
+- Medium: 17 vendors (34%)
+- Low: 15 vendors (30%)
+
+**Suspected Duplicates:** 13 rows flagged with potential duplicates
+
+**Example Duplicate Groups:**
+1. **Food & Beverage Consolidation:** Pret A Manger, Axil Coffee Roasters, Wolt Enterprises Oy, Uber *Eats, Istra Wine, Pan-Pek D.O.O., Cupcake Central (7 vendors, $431 combined - significant T&E policy enforcement opportunity)
+2. **Printing Services Overlap:** Vistaprint, Snappy Snaps, Kall Kwik Centre 565 (3 vendors, $244 combined - consolidate to single print vendor)
+3. **Courier/Shipping Fragmentation:** DHL Express (UK) Ltd, FedEx Express UK, Gophr (3 vendors, $218 combined - consolidate courier services)
+
+**Classification Notes and Assumptions:**
+- **Croatian vendor ambiguity:** Fifteen low-confidence Croatian D.O.O. entities with unclear business purposes (Fero-Term, Illunis, Bonus Opinio, Fortis Trade, Till Trade, Lemia, New Block, Garden City, etc.) require stakeholder validation for ongoing necessity
+- **Missing vendor identification:** One blank entry ($137) indicates data quality issues in procurement system; requires investigation and proper vendor coding
+- **Food and beverage policy gaps:** Seven separate food vendors totaling $431 suggest lack of T&E policy enforcement; employees using meal delivery apps and restaurants without controls
+- **Small-dollar vendor proliferation:** Batch shows significant tail spend with 30% low-confidence vendors; many appear to be one-time or discretionary purchases that should be terminated or consolidated
+- **SaaS license optimization opportunity:** Three Engineering/IT SaaS vendors (Uptime Robot, Click Send, Axosoft GitKraken) totaling $187 should be reviewed for license utilization and potential consolidation with existing tools
