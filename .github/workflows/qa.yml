@@ -1,0 +1,66 @@
+name: QA Pipeline
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Check for Claude batch files
+        run: |
+          BATCH_DIR="03_outputs/01_claude_batches"
+          BATCH_FILES=$(find "$BATCH_DIR" -name "*.csv" -type f 2>/dev/null | wc -l)
+
+          if [ "$BATCH_FILES" -eq 0 ]; then
+            echo "::error::No batch files found in $BATCH_DIR"
+            echo ""
+            echo "=========================================="
+            echo "ERROR: Claude batch files are missing!"
+            echo "=========================================="
+            echo ""
+            echo "The merge step requires Claude API batch results."
+            echo "Before running this pipeline, you must:"
+            echo ""
+            echo "  1. Run 'make batches' to generate batch input files"
+            echo "  2. Submit batches to the Claude API for processing"
+            echo "  3. Download the completed batch results to:"
+            echo "     $BATCH_DIR/"
+            echo ""
+            echo "Batch files should be named: batch_001.csv, batch_002.csv, etc."
+            echo ""
+            exit 1
+          fi
+
+          echo "Found $BATCH_FILES batch file(s) in $BATCH_DIR"
+          ls -la "$BATCH_DIR"/*.csv
+
+      - name: Run normalize
+        run: make normalize
+
+      - name: Run prefill
+        run: make prefill
+
+      - name: Run batches
+        run: make batches
+
+      - name: Run merge
+        run: make merge
+
+      - name: Run qa
+        run: make qa
