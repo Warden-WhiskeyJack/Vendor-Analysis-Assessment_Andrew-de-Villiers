@@ -122,13 +122,6 @@ make clean
 - Duplicate groups consolidated from alias map + Claude suspected duplicates
 - 100% QA pass rate
 
-## Deliverables
-
-After completing the assessment, paste your final links into `00_admin/02_links.md`:
-
-- **Google Sheet**: Final vendor analysis with all classifications
-- **Executive Memo**: Summary findings and top 3 opportunities
-
 ---
 
 **Project Status**: Complete
