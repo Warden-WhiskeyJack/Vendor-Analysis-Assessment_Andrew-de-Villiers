@@ -1,0 +1,341 @@
+# Controlled Category List
+categories:
+  - Cloud
+  - CRM
+  - Sales Engagement
+  - Travel & Expense
+  - Coworking/Office
+  - Telecom
+  - Recruiting
+  - Audit/Tax
+  - Legal Services
+  - Productivity/Collab
+  - Security/IT Ops
+  - Marketing/SEO/PR
+  - Product/Design
+  - Finance Systems
+  - General Ops
+  - Other
+
+# Allowed Departments (12 total - from 00_admin/01_department_rubric.md)
+departments:
+  - Engineering
+  - Facilities
+  - G&A
+  - Legal
+  - M&A
+  - Marketing
+  - SaaS
+  - Product
+  - Professional Services
+  - Sales
+  - Support
+  - Finance
+
+# Prefill Rules
+rules:
+  - id: R001
+    match_type: contains
+    pattern: salesforce
+    department: Sales
+    category: CRM
+    description_template: CRM platform for sales and customer management
+    suggestion: Consolidate
+    notes: Primary CRM system, check for duplicate licenses
+
+  - id: R002
+    match_type: contains
+    pattern: hubspot
+    department: Marketing
+    category: CRM
+    description_template: Marketing automation and CRM platform
+    suggestion: Consolidate
+    notes: Marketing CRM, may overlap with Salesforce
+
+  - id: R003
+    match_type: regex
+    pattern: (amazon web services|aws)
+    department: Engineering
+    category: Cloud
+    description_template: Cloud infrastructure and computing services
+    suggestion: Optimize costs
+    notes: Review usage and right-size instances
+
+  - id: R004
+    match_type: contains
+    pattern: microsoft
+    department: SaaS
+    category: Productivity/Collab
+    description_template: Office productivity and collaboration suite
+    suggestion: Consolidate
+    notes: Check for unused Microsoft 365 licenses
+
+  - id: R005
+    match_type: contains
+    pattern: google
+    department: SaaS
+    category: Productivity/Collab
+    description_template: Workspace collaboration and productivity tools
+    suggestion: Consolidate
+    notes: May overlap with Microsoft suite
+
+  - id: R006
+    match_type: regex
+    pattern: (navan|tripactions)
+    department: Finance
+    category: Travel & Expense
+    description_template: Corporate travel booking and expense management
+    suggestion: Consolidate
+    notes: Unified T&E platform
+
+  - id: R007
+    match_type: regex
+    pattern: (wework|tog|innovent spaces|common desk)
+    department: Facilities
+    category: Coworking/Office
+    description_template: Flexible coworking and office space
+    suggestion: Optimize costs
+    notes: Review space utilization and negotiate rates
+
+  - id: R008
+    match_type: regex
+    pattern: (telefonica|telekom|t-mobile|vodafone|starhub)
+    department: G&A
+    category: Telecom
+    description_template: Telecommunications and mobile services
+    suggestion: Consolidate
+    notes: Consolidate telecom vendors across regions
+
+  - id: R009
+    match_type: regex
+    pattern: (bdo|rsm|grant thornton|pwc|pricewaterhouse|crowe horwath)
+    department: Professional Services
+    category: Audit/Tax
+    description_template: Audit tax and financial advisory services
+    suggestion: Consolidate
+    notes: Standardize on fewer audit firms
+
+  - id: R010
+    match_type: regex
+    pattern: (law|legal|solicitor|lawyers)
+    department: Legal
+    category: Legal Services
+    description_template: Legal counsel and advisory services
+    suggestion: Consolidate
+    notes: Review legal spend across jurisdictions
+
+  - id: R011
+    match_type: regex
+    pattern: (recruitment|recruiting|mason frank|cedar recruitment)
+    department: G&A
+    category: Recruiting
+    description_template: Talent acquisition and recruitment services
+    suggestion: Consolidate
+    notes: Reduce number of recruiting agencies
+
+  - id: R012
+    match_type: contains
+    pattern: linkedin
+    department: Marketing
+    category: Marketing/SEO/PR
+    description_template: Professional networking and recruitment advertising
+    suggestion: Optimize costs
+    notes: Review seat licenses and advertising spend
+
+  - id: R013
+    match_type: contains
+    pattern: slack
+    department: SaaS
+    category: Productivity/Collab
+    description_template: Team messaging and collaboration platform
+    suggestion: Consolidate
+    notes: May duplicate Microsoft Teams functionality
+
+  - id: R014
+    match_type: contains
+    pattern: trello
+    department: Product
+    category: Productivity/Collab
+    description_template: Project management and task tracking
+    suggestion: Consolidate
+    notes: Consider consolidating PM tools
+
+  - id: R015
+    match_type: contains
+    pattern: figma
+    department: Product
+    category: Product/Design
+    description_template: Collaborative design and prototyping tool
+    suggestion: Optimize costs
+    notes: Review seat count vs active users
+
+  - id: R016
+    match_type: contains
+    pattern: adobe
+    department: Marketing
+    category: Product/Design
+    description_template: Creative design and marketing software
+    suggestion: Optimize costs
+    notes: Verify license utilization
+
+  - id: R017
+    match_type: contains
+    pattern: outreach
+    department: Sales
+    category: Sales Engagement
+    description_template: Sales engagement and automation platform
+    suggestion: Consolidate
+    notes: Primary sales engagement tool
+
+  - id: R018
+    match_type: regex
+    pattern: (cognism|lusha|zoominfo)
+    department: Sales
+    category: Sales Engagement
+    description_template: B2B contact data and sales intelligence
+    suggestion: Consolidate
+    notes: Consolidate sales intelligence vendors
+
+  - id: R019
+    match_type: contains
+    pattern: semrush
+    department: Marketing
+    category: Marketing/SEO/PR
+    description_template: SEO and digital marketing analytics
+    suggestion: Optimize costs
+    notes: Review feature usage
+
+  - id: R020
+    match_type: regex
+    pattern: (cision|pr newswire)
+    department: Marketing
+    category: Marketing/SEO/PR
+    description_template: Press release distribution and media monitoring
+    suggestion: Optimize costs
+    notes: Evaluate campaign frequency
+
+  - id: R021
+    match_type: regex
+    pattern: (sage|planful)
+    department: Finance
+    category: Finance Systems
+    description_template: Financial planning and accounting software
+    suggestion: Consolidate
+    notes: Standardize financial systems
+
+  - id: R022
+    match_type: regex
+    pattern: (infosys|cloud technology solutions)
+    department: G&A
+    category: Security/IT Ops
+    description_template: IT consulting and managed services
+    suggestion: Optimize costs
+    notes: Review service contract terms
+
+  - id: R023
+    match_type: contains
+    pattern: smartsheet
+    department: SaaS
+    category: Productivity/Collab
+    description_template: Work management and collaboration platform
+    suggestion: Consolidate
+    notes: May overlap with other project tools
+
+  - id: R024
+    match_type: contains
+    pattern: docusign
+    department: SaaS
+    category: Productivity/Collab
+    description_template: Electronic signature and document management
+    suggestion: Optimize costs
+    notes: Monitor envelope usage
+
+  - id: R025
+    match_type: regex
+    pattern: (insurance|aetna|bupa|allianz|cigna)
+    department: G&A
+    category: General Ops
+    description_template: Employee health and insurance benefits
+    suggestion: Consolidate
+    notes: Standardize benefits across regions
+
+  - id: R026
+    match_type: contains
+    pattern: workato
+    department: SaaS
+    category: Productivity/Collab
+    description_template: Integration and workflow automation platform
+    suggestion: Optimize costs
+    notes: Review active automation usage
+
+  - id: R027
+    match_type: contains
+    pattern: atlassian
+    department: Engineering
+    category: Productivity/Collab
+    description_template: Software development and collaboration tools
+    suggestion: Optimize costs
+    notes: Check Jira and Confluence seat counts
+
+  - id: R028
+    match_type: contains
+    pattern: jetbrains
+    department: Engineering
+    category: Productivity/Collab
+    description_template: Integrated development environment IDE software
+    suggestion: Optimize costs
+    notes: Verify developer license needs
+
+  - id: R029
+    match_type: regex
+    pattern: (parking|garage)
+    department: Facilities
+    category: General Ops
+    description_template: Employee parking and facilities services
+    suggestion: Optimize costs
+    notes: Review parking space allocation
+
+  - id: R030
+    match_type: regex
+    pattern: (catering|food|restaurant|kitchen)
+    department: Facilities
+    category: General Ops
+    description_template: Employee catering and food services
+    suggestion: Optimize costs
+    notes: Consolidate food service vendors
+
+  - id: R031
+    match_type: contains
+    pattern: lastpass
+    department: G&A
+    category: Security/IT Ops
+    description_template: Password management and security tool
+    suggestion: Consolidate
+    notes: Ensure all teams use same solution
+
+  - id: R032
+    match_type: regex
+    pattern: (github|gitlab)
+    department: Engineering
+    category: Productivity/Collab
+    description_template: Code repository and version control
+    suggestion: Consolidate
+    notes: Standardize on single code platform
+
+  - id: R033
+    match_type: contains
+    pattern: zapier
+    department: SaaS
+    category: Productivity/Collab
+    description_template: Workflow automation and app integration
+    suggestion: Consolidate
+    notes: May overlap with Workato
+
+  - id: R034
+    match_type: contains
+    pattern: apple
+    department: G&A
+    category: General Ops
+    description_template: Hardware and device purchases
+    suggestion: Optimize costs
+    notes: Review device refresh cycle
