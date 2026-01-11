@@ -35,14 +35,17 @@ Salesforce accounts for **$3.1M (39.5% of total vendor spend)**. Industry benchm
 
 ### 2. Consolidate Duplicate Vendors — ~$460K/year savings
 
-| Overlapping Spend | Duplicate Groups | Implementation |
-|-------------------|------------------|----------------|
-| $1,500,000 | 52 groups | High complexity |
+| Overlapping Spend | Consolidation Opportunities | Implementation |
+|-------------------|----------------------------|----------------|
+| ~$1,100,000 | 15–20 vendor groups | High complexity |
 
-**Key duplications identified:**
-- Coworking spaces (4 vendors): $739K
-- M&A Advisory (3 vendors): $85K
-- Consulting services (2 vendors): $84K
+**Highest-value consolidation targets:**
+- Coworking spaces (4 overlapping vendors): $739K
+- M&A Advisory (3 firms): $85K
+- Consulting services (2 entities): $84K
+- Recruiting/HR (6 vendors): $103K
+
+*Note: Initial screening flagged 52 vendor groups, but detailed review shows ~30 are category groupings (e.g., multiple restaurants) rather than true duplicates. The 15–20 actionable opportunities above represent real consolidation potential.*
 
 **Action required:** Standardize to single preferred vendor per category where regional requirements permit.
 
