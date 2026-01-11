@@ -49,6 +49,7 @@ Each batch should be appended to the table below after processing completes.
 | batch_002 | batch_002_input.csv | batch_002.csv | 51-100 | 50 | $226,139 | 33 | 11 | 6 | 18 | ✅ Complete | See detailed entry below |
 | batch_003 | batch_003_input.csv | batch_003.csv | 101-150 | 50 | $82,101 | 24 | 22 | 4 | 14 | ✅ Complete | See detailed entry below |
 | batch_004 | batch_004_input.csv | batch_004.csv | 151-200 | 50 | $30,053 | 24 | 14 | 12 | 27 | ✅ Complete | See detailed entry below |
+| batch_005 | batch_005_input.csv | batch_005.csv | 201-250 | 50 | $11,302 | 29 | 16 | 5 | 32 | ✅ Complete | See detailed entry below |
 
 ---
 
@@ -172,3 +173,34 @@ Each batch should be appended to the table below after processing completes.
 - **Travel & Expense policy gaps:** Combined T&E spend of $5,873 across 11 vendors (hotels, airlines, transport) suggests lack of preferred vendor agreements and travel management controls
 - **One-time service vendors:** Student Packers & Movers ($371), The Cycle Gap Adyar ($765), and potentially Blitz-Cinestar ($426) appear to be one-time purchases flagged for termination review
 - **SaaS optimization opportunity:** Three SaaS vendors (Epignosis LLC, Tau On-Line, Entrio Tehnologije) totaling $1,840 should be reviewed for license utilization and subscription optimization
+
+---
+
+### Batch 005 - Detailed Entry
+
+**Input File:** `02_working/01_batches/batch_005_input.csv`
+**Output File:** `03_outputs/01_claude_batches/batch_005.csv`
+**Row Range:** 201-250 (from batch_manifest.csv)
+**Vendor Count:** 50
+**Total Spend:** $11,302.00
+
+**Confidence Distribution:**
+- High: 29 vendors (58%)
+- Medium: 16 vendors (32%)
+- Low: 5 vendors (10%)
+
+**Suspected Duplicates:** 32 rows flagged with potential duplicates
+
+**Example Duplicate Groups:**
+1. **Event & Entertainment Services:** Rishi Events And Entainment, Maniax Melbourne Cbd, Djs For U, Event Ors, Paint&Wine, Sportkart D.O.O. (6 vendors, $1,157 combined - significant consolidation opportunity)
+2. **IT Services & Development:** Adamma Info Services Private Limited, Kosmaz Technologies Croatia, Infodata, Zettanet (4 vendors, $892 combined - overlapping IT service providers)
+3. **Shipping & Logistics:** Dhl, Niva Transport J.D.O.O., Parcelforce Worldwide (3 vendors, $704 combined - consolidate courier services)
+4. **Restaurant & Catering:** Pepe's Italian And Liquor, The Riding House Cafe, Taste Of Health (3 vendors, $863 combined - enforce T&E policy)
+5. **Learning Platforms:** Pluralsight, Interaction Design Foundation (2 vendors, $456 combined - consolidate training subscriptions)
+
+**Classification Notes and Assumptions:**
+- **High entertainment vendor fragmentation:** Six event/entertainment vendors totaling $1,157 suggest lack of T&E policy for team events; these appear to be one-time activities that should be discontinued or managed through single vendor
+- **Croatian vendor ambiguity:** Five low-confidence vendors (Stillmark Zagreb, Bella Operation, Nastavni Zavod, Xenon Savjetovanje, Monile) with unclear business purposes require stakeholder validation for ongoing necessity
+- **Retail & personal purchases:** Multiple retail vendors (Spar supermarket, Amazon, Notino cosmetics, Regency Hampers) totaling $983 suggest procurement policy gaps allowing personal/discretionary purchases
+- **Learning platform overlap:** Both Pluralsight and Interaction Design Foundation provide online training; consolidation opportunity to reduce duplicate subscriptions and negotiate volume pricing
+- **Travel & Expense policy gaps:** Hotel and restaurant spend across 8 vendors ($1,395 combined) without clear preferred vendor agreements indicates need for corporate T&E management and policy enforcement

@@ -1,0 +1,51 @@
+vendor_name_raw,spend_usd,department,category,description_1l,suggestion,confidence,rationale_short,suspected_duplicates
+Inicijativa Centar Za Edukaciju,358.0,Professional Services,General Ops,Croatian education center for professional training,Optimize costs,Medium,Training center - validate if used vs online alternatives,
+Niva Transport J.D.O.O.,358.0,Facilities,Travel & Expense,Croatian transport and logistics services,Consolidate,High,Combine with other transport vendors,Dhl;Parcelforce Worldwide
+Doctor Anywhere Operations Pte Ltd,347.0,G&A,General Ops,Singapore-based telemedicine and healthcare platform,Terminate,Medium,Evaluate usage and necessity of healthcare benefits,
+Spar Hrvatska D.O.O.,341.0,Facilities,General Ops,Croatian supermarket chain for office supplies/groceries,Consolidate,High,Retail purchases - enforce procurement policy,Amazon (Aus);Notino S.R.O.
+Pepe'S Italian And Liquor,339.0,G&A,Travel & Expense,Restaurant and bar expenses,Consolidate,High,Reduce meal spend via T&E policy,"The Riding House Cafe;Taste Of Health;Advena"
+"Pluralsight, Llc",318.0,Engineering,Productivity/Collab,Tech training and online learning SaaS platform,Optimize costs,High,Review license utilization and consolidate learning,Interaction Design Foundation
+Maniax Melbourne Cbd,315.0,G&A,General Ops,Melbourne entertainment venue for team activities,Terminate,High,One-time team event - discontinue recurring spend,Rishi Events And Entainment;Event Ors;Paint&Wine
+Dnsimple,312.0,Engineering,Security/IT Ops,Domain registration and DNS management service,Optimize costs,High,Consolidate domain management vendors,
+Treci Posao D.O.O.,307.0,G&A,Recruiting,Croatian recruiting and staffing agency,Consolidate,Medium,Consolidate recruiting vendors,
+Formswift,301.0,Legal,Productivity/Collab,Document generation and legal forms SaaS tool,Optimize costs,Medium,Evaluate necessity vs existing tools,
+Safestore Ltd,287.0,Facilities,General Ops,UK self-storage and warehousing services,Optimize costs,High,Review storage needs and alternatives,
+Split Tech City,284.0,Facilities,Coworking/Office,Croatian tech hub and coworking space in Split,Consolidate,High,Consolidate coworking/office space vendors,
+National Securities Depository Limited(Nsdl),281.0,Finance,Finance Systems,Indian securities depository for shareholder services,Optimize costs,Medium,Regulatory requirement - negotiate better rates,Bigshare Services Private Limited
+Adamma Info Services Private Limited,273.0,Engineering,Professional Services,Indian IT services and software development firm,Consolidate,Medium,Consolidate outsourced dev vendors,Kosmaz Technologies Croatia;Zettanet;Infodata
+The Riding House Cafe,265.0,G&A,Travel & Expense,London restaurant for meals and hospitality,Consolidate,High,Reduce via T&E policy enforcement,"Pepe'S Italian And Liquor;Taste Of Health;Advena"
+Stillmark Zagreb D.O.O.,263.0,G&A,General Ops,Croatian business services provider,Terminate,Low,Unclear service - validate necessity,
+Taste Of Health,259.0,G&A,Travel & Expense,Health-focused restaurant or catering service,Consolidate,Medium,Consolidate meal vendors,"Pepe'S Italian And Liquor;The Riding House Cafe"
+Infodata,241.0,Engineering,Professional Services,IT services and data management provider,Consolidate,Medium,Consolidate IT service vendors,Adamma Info Services Private Limited;Kosmaz Technologies Croatia;Zettanet
+Amazon (Aus),233.0,Facilities,General Ops,Amazon Australia for office supplies and equipment,Consolidate,High,Consolidate retail purchases,Spar Hrvatska D.O.O.;Notino S.R.O.;Regency Hampers Ltd
+Regency Hampers Ltd,248.0,Marketing,General Ops,UK corporate gift hampers and branded merchandise,Optimize costs,High,Review gifting budget and frequency,
+Bella Operation A/S,241.0,G&A,General Ops,Danish operations and business services,Terminate,Low,Unclear service type - validate,
+The Plant Man,235.0,Facilities,General Ops,Office plant maintenance and landscaping services,Optimize costs,Medium,Nice-to-have service - evaluate ROI,
+Media Promo Plus D.O.O.,226.0,Marketing,Marketing/SEO/PR,Croatian marketing and promotional services agency,Consolidate,High,Consolidate marketing vendors,Puzzle Promotion J.D.O.O.
+Expert-Ing D.O.O.,225.0,Facilities,Professional Services,Croatian engineering consulting services,Terminate,Medium,Evaluate ongoing need for engineering consultants,Xenon Savjetovanje D.O.O.
+Djs For U,220.0,G&A,General Ops,DJ and entertainment services for events,Terminate,High,One-time event - discontinue,Rishi Events And Entainment;Maniax Melbourne Cbd;Event Ors
+Freepik Company,203.0,Product,Product/Design,Design resources and stock image subscriptions,Optimize costs,High,Review license usage and alternatives,
+Nastavni Zavod Za Javno Zdravstvo Dr. Andrija Å Tampar,199.0,G&A,General Ops,Croatian public health institute for health services,Terminate,Low,Unclear purpose - validate necessity,
+Rishi Events And Entainment,198.0,G&A,General Ops,Event planning and entertainment services,Consolidate,High,Consolidate event vendors,Maniax Melbourne Cbd;Djs For U;Event Ors;Paint&Wine
+Kosmaz Technologies Croatia,195.0,Engineering,Professional Services,Croatian IT and technology services provider,Consolidate,Medium,Consolidate IT vendors,Adamma Info Services Private Limited;Infodata;Zettanet
+Dhl,191.0,Facilities,Travel & Expense,International shipping and courier services,Consolidate,High,Consolidate shipping vendors,Niva Transport J.D.O.O.;Parcelforce Worldwide
+Hotel Laguna D.D.,190.0,G&A,Travel & Expense,Croatian hotel for business travel accommodation,Consolidate,High,Enforce T&E policy with preferred hotels,Advena
+Bigshare Services Private Limited,188.0,Finance,Finance Systems,Indian share registry and investor services,Optimize costs,Medium,Regulatory need - negotiate rates,National Securities Depository Limited(Nsdl)
+Zettanet,183.0,Engineering,Security/IT Ops,Network services and IT infrastructure provider,Consolidate,Medium,Consolidate IT infrastructure vendors,Adamma Info Services Private Limited;Kosmaz Technologies Croatia;Infodata
+Hahn Air,183.0,G&A,Travel & Expense,Airline ticketing and travel distribution services,Optimize costs,High,Consolidate via corporate travel management,
+Vitality Works,182.0,G&A,General Ops,Wellness and employee health services provider,Optimize costs,Medium,Review wellness program ROI and utilization,
+Avoxi Inc,178.0,Engineering,Telecom,Cloud telephony and VoIP communications platform,Optimize costs,High,Consolidate telecom vendors,
+"Solarwinds, Inc",166.0,Engineering,Security/IT Ops,IT monitoring and management SaaS platform,Optimize costs,High,Review license count and usage,
+Xenon Savjetovanje D.O.O.,164.0,G&A,Professional Services,Croatian consulting and advisory services,Terminate,Low,Unclear scope - validate ongoing need,Expert-Ing D.O.O.
+Floom Ltd,162.0,G&A,General Ops,UK flower delivery service for gifts,Terminate,High,Discretionary spend - discontinue,Regency Hampers Ltd
+Notino S.R.O.,161.0,G&A,General Ops,Czech beauty and cosmetics online retailer,Terminate,Medium,Personal purchases - enforce procurement policy,Amazon (Aus);Spar Hrvatska D.O.O.
+"Paint&Wine, Vl. Stevo Dosen",159.0,G&A,General Ops,Paint and wine event experiences for teams,Terminate,High,One-time team event - discontinue,Rishi Events And Entainment;Maniax Melbourne Cbd;Event Ors
+Parcelforce Worldwide,155.0,Facilities,Travel & Expense,UK parcel and express delivery services,Consolidate,High,Consolidate shipping vendors,Dhl;Niva Transport J.D.O.O.
+Advena,154.0,G&A,Travel & Expense,German hotel chain for business travel,Consolidate,High,Enforce T&E policy with preferred hotels,Hotel Laguna D.D.;Pepe'S Italian And Liquor;The Riding House Cafe
+Hrvatski Nezavisnici Izvoznici Softvera,154.0,Marketing,General Ops,Croatian software exporters association membership,Optimize costs,Medium,Evaluate membership value and ROI,
+Monile J.D.O.O.,152.0,G&A,General Ops,Croatian company with unclear business type,Terminate,Low,Unclear service - validate necessity,
+Puzzle Promotion J.D.O.O.,143.0,Marketing,Marketing/SEO/PR,Croatian promotional and marketing services,Consolidate,High,Consolidate marketing vendors,Media Promo Plus D.O.O.
+ZagrebaäKi Holding D.O.O.,143.0,Facilities,General Ops,Zagreb city utilities holding company,Optimize costs,High,Municipal utilities - negotiate rates if possible,
+Event Ors,143.0,G&A,General Ops,Event organization and planning services,Consolidate,High,Consolidate event vendors,Rishi Events And Entainment;Maniax Melbourne Cbd;Djs For U;Paint&Wine
+Sportkart D.O.O.,141.0,G&A,General Ops,Croatian sports and karting venue for team events,Terminate,High,One-time team event - discontinue,Rishi Events And Entainment;Maniax Melbourne Cbd
+"Interaction Design Foundation, Inc",138.0,Product,Productivity/Collab,Design education and online training platform,Optimize costs,High,Consolidate learning platforms,Pluralsight
