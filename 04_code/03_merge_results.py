@@ -1,16 +1,42 @@
 #!/usr/bin/env python3
 """
-03_merge_results.py - Merge prefilled vendor data with Claude batch results.
+Merge Prefilled Vendor Data with Claude Batch Results.
+
+Purpose:
+    Combines rule-based prefilled vendor data with LLM-generated classifications.
+    Performs validation, reconciles spend totals, and produces final output files
+    ready for spreadsheet import.
 
 Inputs:
-- 02_working/vendors_prefilled.csv
-- 03_outputs/01_claude_batches/batch_*.csv
-- 01_inputs/vendors_raw.csv (for spend reconciliation)
+    - 02_working/vendors_prefilled.csv: All vendors with prefill columns
+    - 03_outputs/01_claude_batches/batch_*.csv: LLM classification results
+    - 01_inputs/vendors_raw.csv: Original input for spend reconciliation
 
 Outputs:
-- 03_outputs/vendors_final_for_sheet.csv
-- 03_outputs/vendors_with_qc_columns.csv
-- 03_outputs/process_metrics.md
+    - 03_outputs/vendors_final_for_sheet.csv: Final data with exact headers for import
+    - 03_outputs/vendors_with_qc_columns.csv: All data including QC metadata
+    - 03_outputs/process_metrics.md: Processing statistics and metrics
+
+Algorithm:
+    1. Load prefilled vendor data and build match keys
+    2. Load Claude batch results, matching to prefilled via multiple strategies
+    3. Merge data (prefill values take precedence over Claude values)
+    4. Validate departments and suggestions against allowed lists
+    5. Write output files and verify spend reconciliation
+
+Matching Strategy:
+    Vendor names may differ between prefilled and batch files due to encoding.
+    We use multiple matching strategies (in order of preference):
+    - Strategy 1: Normalized alphanumeric + spend amount
+    - Strategy 2: Alternative normalization via clean_vendor_name
+    - Strategy 3: Original unicode normalization
+    - Strategy 4: Spend-only match if unique
+    - Strategy 5: Fuzzy match on spend-matching candidates (65% threshold)
+
+How to run:
+    python 04_code/03_merge_results.py
+
+    Requires vendors_prefilled.csv and batch_*.csv files to exist.
 """
 
 import csv
@@ -21,7 +47,11 @@ import unicodedata
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-# Constants
+# =============================================================================
+# Constants and Validation Rules
+# =============================================================================
+
+# Allowed values for vendor classification
 ALLOWED_DEPARTMENTS = [
     "Engineering",
     "Facilities",
@@ -39,7 +69,13 @@ ALLOWED_DEPARTMENTS = [
 
 ALLOWED_SUGGESTIONS = ["Consolidate", "Terminate", "Optimize costs"]
 
+# Maximum words in description (truncated for spreadsheet display)
 MAX_DESCRIPTION_WORDS = 15
+
+# Fuzzy match threshold for vendor name matching (see Strategy 5 in docstring).
+# 65% balances catching encoding variations vs avoiding false matches.
+# Lower values risk incorrect matches; higher values miss legitimate variations.
+FUZZY_MATCH_THRESHOLD = 0.65
 
 # Paths (relative to project root)
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -49,10 +85,23 @@ VENDORS_RAW_CSV = PROJECT_ROOT / "01_inputs" / "vendors_raw.csv"
 OUTPUT_DIR = PROJECT_ROOT / "03_outputs"
 
 
+# =============================================================================
+# Vendor Name Normalization Functions
+# =============================================================================
+
 def normalize_for_match(name: str, spend: float) -> str:
-    """Create a normalized key for matching vendors between files.
+    """
+    Create a normalized key for matching vendors between files.
 
     Uses spend amount + normalized name to handle encoding and case differences.
+    The spend amount helps disambiguate vendors with similar names.
+
+    Args:
+        name: Vendor name to normalize.
+        spend: Vendor spend amount (used as part of key).
+
+    Returns:
+        Match key in format "spend:normalized_name".
     """
     # Remove accents and special characters
     normalized = unicodedata.normalize("NFKD", name)
@@ -65,7 +114,15 @@ def normalize_for_match(name: str, spend: float) -> str:
 
 
 def clean_vendor_name(name: str) -> str:
-    """Clean vendor name similar to 01_normalize_vendors.py logic."""
+    """
+    Clean vendor name using same logic as 01_normalize_vendors.py.
+
+    Args:
+        name: Raw vendor name.
+
+    Returns:
+        Cleaned name (lowercase, unicode normalized, no special chars).
+    """
     # Lowercase
     cleaned = name.lower()
     # Normalize unicode
@@ -78,15 +135,33 @@ def clean_vendor_name(name: str) -> str:
 
 
 def normalize_for_match_v2(name: str, spend: float) -> str:
-    """Alternative normalization using simpler cleaning."""
+    """
+    Alternative normalization using simpler cleaning (Strategy 2).
+
+    Args:
+        name: Vendor name to normalize.
+        spend: Vendor spend amount.
+
+    Returns:
+        Match key in format "spend:alphanumeric_only".
+    """
     cleaned = clean_vendor_name(name)
     # Extract just alphanumeric chars for matching
     alpha_only = "".join(c for c in cleaned if c.isalnum())
     return f"{int(spend)}:{alpha_only}"
 
 
+# =============================================================================
+# Data Loading Functions
+# =============================================================================
+
 def load_prefilled_data() -> Tuple[Dict[str, dict], Dict[str, str]]:
-    """Load vendors_prefilled.csv and return dict keyed by vendor_name_raw + match key lookup."""
+    """
+    Load vendors_prefilled.csv and build match key lookup.
+
+    Returns:
+        Tuple of (vendors dict keyed by vendor_name_raw, match_keys dict).
+    """
     vendors = {}
     match_keys = {}  # normalized key -> vendor_name_raw
 
@@ -131,14 +206,22 @@ def load_prefilled_data() -> Tuple[Dict[str, dict], Dict[str, str]]:
 
 
 def load_claude_batches(match_keys: Dict[str, str]) -> Dict[str, dict]:
-    """Load all batch_*.csv files from Claude output.
+    """
+    Load all batch_*.csv files from Claude output.
 
     Uses match_keys to resolve vendor names that differ due to encoding.
-    Returns dict keyed by the canonical vendor_name_raw from prefilled.
+    Applies multiple matching strategies in order of preference to handle
+    encoding variations between input and output files.
+
+    Args:
+        match_keys: Dictionary mapping normalized keys to vendor_name_raw.
+
+    Returns:
+        Dict keyed by canonical vendor_name_raw from prefilled data.
     """
-    claude_data = {}
+    claude_data: Dict[str, dict] = {}
     batch_files = sorted(glob.glob(str(CLAUDE_BATCHES_DIR / "batch_*.csv")))
-    unmatched = []
+    unmatched: List[Tuple[str, float]] = []
 
     for batch_file in batch_files:
         with open(batch_file, "r", encoding="utf-8") as f:
@@ -147,42 +230,43 @@ def load_claude_batches(match_keys: Dict[str, str]) -> Dict[str, dict]:
                 vendor_name = row["vendor_name_raw"]
                 spend = float(row["spend_usd"])
 
-                # Try multiple matching strategies
+                # Try multiple matching strategies (in order of reliability)
                 canonical_name = None
 
-                # Strategy 1: Use clean_vendor_name (similar to 01_normalize_vendors.py)
+                # Strategy 1: Alphanumeric normalization (most common match)
                 cleaned = clean_vendor_name(vendor_name)
                 alpha_only = "".join(c for c in cleaned if c.isalnum())
                 batch_key1 = f"{int(spend)}:{alpha_only}"
                 if batch_key1 in match_keys:
                     canonical_name = match_keys[batch_key1]
 
-                # Strategy 2: Try normalize_for_match_v2
+                # Strategy 2: Alternative normalization via helper function
                 if canonical_name is None:
                     batch_key2 = normalize_for_match_v2(vendor_name, spend)
                     if batch_key2 in match_keys:
                         canonical_name = match_keys[batch_key2]
 
-                # Strategy 3: Original normalization
+                # Strategy 3: Unicode NFKD normalization (handles accents)
                 if canonical_name is None:
                     batch_key3 = normalize_for_match(vendor_name, spend)
                     if batch_key3 in match_keys:
                         canonical_name = match_keys[batch_key3]
 
-                # Strategy 4: Fallback - try spend-only match if unique
+                # Strategy 4: Spend-only match (if only one vendor at that spend level)
                 if canonical_name is None:
                     spend_matches = [k for k in match_keys.keys() if k.startswith(f"{int(spend)}:")]
                     if len(spend_matches) == 1:
                         canonical_name = match_keys[spend_matches[0]]
 
-                # Strategy 5: Fuzzy match on spend-matching candidates using edit distance
+                # Strategy 5: Fuzzy match on spend-matching candidates
+                # Uses simple character position matching with length penalty.
+                # Threshold prevents false matches on short/common names.
                 if canonical_name is None and spend_matches:
                     batch_alpha = "".join(c for c in cleaned if c.isalnum())
                     best_match = None
                     best_ratio = 0.0
                     for key in spend_matches:
                         _, prefilled_alpha = key.split(":", 1)
-                        # Calculate similarity ratio based on matching characters
                         max_len = max(len(batch_alpha), len(prefilled_alpha))
                         min_len = min(len(batch_alpha), len(prefilled_alpha))
                         if max_len > 0:
@@ -190,10 +274,10 @@ def load_claude_batches(match_keys: Dict[str, str]) -> Dict[str, dict]:
                             matches = sum(
                                 1 for i in range(min_len) if batch_alpha[i] == prefilled_alpha[i]
                             )
-                            # Add bonus for same length
+                            # Apply penalty for length differences
                             length_penalty = abs(len(batch_alpha) - len(prefilled_alpha)) / max_len
                             ratio = (matches / max_len) - (length_penalty * 0.1)
-                            if ratio > best_ratio and ratio > 0.65:  # 65% match threshold
+                            if ratio > best_ratio and ratio > FUZZY_MATCH_THRESHOLD:
                                 best_ratio = ratio
                                 best_match = match_keys[key]
                     if best_match:
@@ -224,7 +308,12 @@ def load_claude_batches(match_keys: Dict[str, str]) -> Dict[str, dict]:
 
 
 def load_raw_spend() -> Tuple[float, Dict[str, float]]:
-    """Load vendors_raw.csv and return total spend and spend per vendor."""
+    """
+    Load vendors_raw.csv for spend reconciliation.
+
+    Returns:
+        Tuple of (total_spend, vendor_spend_dict).
+    """
     total_spend = 0.0
     vendor_spend = {}
 
@@ -248,8 +337,21 @@ def load_raw_spend() -> Tuple[float, Dict[str, float]]:
     return total_spend, vendor_spend
 
 
+# =============================================================================
+# Validation and Transformation Functions
+# =============================================================================
+
 def truncate_description(desc: str, max_words: int = MAX_DESCRIPTION_WORDS) -> str:
-    """Truncate description to max_words and ensure single line."""
+    """
+    Truncate description to max_words and ensure single line.
+
+    Args:
+        desc: Description text to truncate.
+        max_words: Maximum number of words allowed.
+
+    Returns:
+        Truncated description (no trailing ellipsis).
+    """
     if not desc:
         return ""
 
@@ -266,7 +368,17 @@ def truncate_description(desc: str, max_words: int = MAX_DESCRIPTION_WORDS) -> s
 
 
 def validate_department(dept: str) -> Tuple[bool, str]:
-    """Validate department is in allowed list. Return (is_valid, corrected_value)."""
+    """
+    Validate department is in allowed list.
+
+    Attempts case-insensitive matching for leniency.
+
+    Args:
+        dept: Department value to validate.
+
+    Returns:
+        Tuple of (is_valid, corrected_value).
+    """
     if not dept:
         return False, ""
 
@@ -284,7 +396,17 @@ def validate_department(dept: str) -> Tuple[bool, str]:
 
 
 def validate_suggestion(sugg: str) -> Tuple[bool, str]:
-    """Validate suggestion is in allowed list. Return (is_valid, corrected_value)."""
+    """
+    Validate suggestion is in allowed list.
+
+    Attempts case-insensitive matching for leniency.
+
+    Args:
+        sugg: Suggestion value to validate.
+
+    Returns:
+        Tuple of (is_valid, corrected_value).
+    """
     if not sugg:
         return False, ""
 
@@ -301,10 +423,26 @@ def validate_suggestion(sugg: str) -> Tuple[bool, str]:
     return False, sugg
 
 
+# =============================================================================
+# Data Merging and Output Functions
+# =============================================================================
+
 def merge_vendor_data(
     prefilled: Dict[str, dict], claude: Dict[str, dict]
 ) -> List[dict]:
-    """Merge prefilled and Claude data, preferring prefill when present."""
+    """
+    Merge prefilled and Claude data, preferring prefill when present.
+
+    Prefill values (from deterministic rules) take precedence over Claude values.
+    This ensures consistency for known vendor patterns.
+
+    Args:
+        prefilled: Dict of prefilled vendor data.
+        claude: Dict of Claude LLM results.
+
+    Returns:
+        List of merged vendor records with validation warnings logged.
+    """
     merged = []
     validation_errors = []
 
@@ -382,7 +520,16 @@ def merge_vendor_data(
 
 
 def write_final_for_sheet(merged: List[dict], output_path: Path) -> float:
-    """Write the final CSV for the sheet with exact headers. Return total spend."""
+    """
+    Write the final CSV for spreadsheet import with exact headers.
+
+    Args:
+        merged: List of merged vendor records.
+        output_path: Path to output CSV file.
+
+    Returns:
+        Total spend across all vendors (for reconciliation).
+    """
     total_spend = 0.0
 
     with open(output_path, "w", encoding="utf-8", newline="") as f:
@@ -415,7 +562,13 @@ def write_final_for_sheet(merged: List[dict], output_path: Path) -> float:
 
 
 def write_qc_columns(merged: List[dict], output_path: Path) -> None:
-    """Write the QC version with all columns."""
+    """
+    Write the QC version with all columns including metadata.
+
+    Args:
+        merged: List of merged vendor records.
+        output_path: Path to output CSV file.
+    """
     with open(output_path, "w", encoding="utf-8", newline="") as f:
         fieldnames = [
             "vendor_name_raw",
@@ -452,7 +605,16 @@ def write_qc_columns(merged: List[dict], output_path: Path) -> None:
 
 
 def write_process_metrics(merged: List[dict], output_path: Path) -> None:
-    """Write process metrics markdown file."""
+    """
+    Write process metrics markdown file.
+
+    Generates statistics including prefill vs Claude counts, confidence
+    distribution, and top vendors by spend.
+
+    Args:
+        merged: List of merged vendor records.
+        output_path: Path to output markdown file.
+    """
     total_count = len(merged)
     prefilled_count = sum(1 for r in merged if not r.get("needs_llm", True))
     claude_count = total_count - prefilled_count
@@ -526,10 +688,19 @@ def write_process_metrics(merged: List[dict], output_path: Path) -> None:
         f.write("- Spend reconciliation performed against raw input\n")
 
 
-def main():
-    """Main entry point."""
+# =============================================================================
+# Main Entry Point
+# =============================================================================
+
+def main() -> int:
+    """
+    Main entry point for merge results.
+
+    Returns:
+        Exit code (0 for success, 1 for reconciliation failure).
+    """
     print("=" * 60)
-    print("03_merge_results.py - Merge Vendor Analysis Results")
+    print("MERGE VENDOR ANALYSIS RESULTS")
     print("=" * 60)
 
     # Ensure output directory exists
@@ -575,26 +746,28 @@ def main():
     print(f"      Final output total: ${final_spend:,.2f}")
     print(f"      Difference:         ${spend_diff:.2f}")
 
+    # Spend reconciliation threshold: $0.01 allows for floating point rounding
     if spend_diff > 0.01:
-        print("\n❌ RECONCILIATION FAILED!")
-        print(f"   Spend difference ${spend_diff:.2f} exceeds $0.01 threshold")
-        sys.exit(1)
-    else:
-        print("   ✓ Reconciliation passed (difference <= $0.01)")
+        print("\nERROR: RECONCILIATION FAILED!")
+        print(f"  Spend difference ${spend_diff:.2f} exceeds $0.01 threshold")
+        return 1
 
-    print("\n" + "=" * 60)
-    print("SUCCESS: All outputs generated")
-    print("=" * 60)
+    print("  Reconciliation passed (difference <= $0.01)")
 
     # Summary
+    print("\n" + "=" * 60)
+    print("SUMMARY")
+    print("=" * 60)
     prefilled_count = sum(1 for r in merged if not r.get("needs_llm", True))
     claude_count = len(merged) - prefilled_count
-    print(f"\nFinal Statistics:")
-    print(f"  - Total vendors: {len(merged)}")
-    print(f"  - Prefilled: {prefilled_count} ({100*prefilled_count/len(merged):.1f}%)")
-    print(f"  - Claude-filled: {claude_count} ({100*claude_count/len(merged):.1f}%)")
-    print(f"  - Total spend: ${final_spend:,.2f}")
+    print(f"Total vendors: {len(merged)}")
+    print(f"Prefilled:     {prefilled_count} ({100*prefilled_count/len(merged):.1f}%)")
+    print(f"Claude-filled: {claude_count} ({100*claude_count/len(merged):.1f}%)")
+    print(f"Total spend:   ${final_spend:,.2f}")
+    print("=" * 60)
+
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
