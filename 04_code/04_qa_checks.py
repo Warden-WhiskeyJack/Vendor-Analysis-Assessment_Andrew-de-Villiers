@@ -1,16 +1,38 @@
 #!/usr/bin/env python3
 """
-04_qa_checks.py - QA validation and duplicate detection for vendor analysis.
+QA Validation and Duplicate Detection for Vendor Analysis.
+
+Purpose:
+    Performs quality assurance checks on the final vendor data and identifies
+    potential duplicate vendors. Generates reports for manual review.
 
 Inputs:
-- 03_outputs/vendors_with_qc_columns.csv
-- 02_working/vendor_alias_map.csv
+    - 03_outputs/vendors_with_qc_columns.csv: Merged vendor data with QC metadata
+    - 02_working/vendor_alias_map.csv: Vendor aliases from normalization (step 01)
 
 Outputs:
-- 03_outputs/qa_report.md
-- 03_outputs/possible_duplicates.csv
+    - 03_outputs/qa_report.md: Comprehensive QA report including:
+        * Summary statistics
+        * Spend breakdowns by department, suggestion, category
+        * Top 25 vendors by spend
+        * Validation issues list
+    - 03_outputs/possible_duplicates.csv: Duplicate groups with:
+        * group_id, vendor_names, combined_spend, source, notes
 
-Prints QA PASS/FAIL with reasons.
+QA Checks Performed:
+    1. Required fields validation (department, suggestion, description, category)
+    2. Value validation against allowed lists (departments, suggestions)
+    3. Duplicate detection via alias map (similarity >= 92%)
+    4. Duplicate detection via LLM-flagged suspected_duplicates field
+
+Exit Codes:
+    0: QA PASS - All validations passed
+    1: QA FAIL - One or more validation issues found
+
+How to run:
+    python 04_code/04_qa_checks.py
+
+    Requires vendors_with_qc_columns.csv from step 03.
 """
 
 import csv
@@ -19,13 +41,16 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Tuple, Set
 
-# Constants
+# =============================================================================
+# Constants and Configuration
+# =============================================================================
+
 PROJECT_ROOT = Path(__file__).parent.parent
 VENDORS_QC_CSV = PROJECT_ROOT / "03_outputs" / "vendors_with_qc_columns.csv"
 ALIAS_MAP_CSV = PROJECT_ROOT / "02_working" / "vendor_alias_map.csv"
 OUTPUT_DIR = PROJECT_ROOT / "03_outputs"
 
-# Allowed values for validation
+# Allowed values for validation (must match 03_merge_results.py)
 ALLOWED_DEPARTMENTS = [
     "Engineering", "Facilities", "G&A", "Legal", "M&A", "Marketing",
     "SaaS", "Product", "Professional Services", "Sales", "Support", "Finance",
@@ -33,13 +58,24 @@ ALLOWED_DEPARTMENTS = [
 
 ALLOWED_SUGGESTIONS = ["Consolidate", "Terminate", "Optimize costs"]
 
-# Alias map score threshold
+# Alias map similarity threshold for duplicate detection.
+# 92% matches the threshold used in 01_normalize_vendors.py.
+# Aliases with scores >= this threshold are considered potential duplicates.
 ALIAS_SCORE_THRESHOLD = 92
 
 
+# =============================================================================
+# Data Loading Functions
+# =============================================================================
+
 def load_vendors_qc() -> List[dict]:
-    """Load vendors_with_qc_columns.csv and return list of vendor records."""
-    vendors = []
+    """
+    Load vendors_with_qc_columns.csv.
+
+    Returns:
+        List of vendor records as dictionaries.
+    """
+    vendors: List[dict] = []
     with open(VENDORS_QC_CSV, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
@@ -60,7 +96,12 @@ def load_vendors_qc() -> List[dict]:
 
 
 def load_alias_map() -> List[dict]:
-    """Load vendor_alias_map.csv and return entries with score >= threshold."""
+    """
+    Load vendor_alias_map.csv and filter by score threshold.
+
+    Returns:
+        List of alias records with similarity_score >= ALIAS_SCORE_THRESHOLD.
+    """
     aliases = []
     try:
         with open(ALIAS_MAP_CSV, "r", encoding="utf-8") as f:
@@ -82,8 +123,27 @@ def load_alias_map() -> List[dict]:
     return aliases
 
 
+# =============================================================================
+# Validation Functions
+# =============================================================================
+
 def validate_vendors(vendors: List[dict]) -> List[str]:
-    """Validate all vendors and return list of issues."""
+    """
+    Validate all vendors against required fields and allowed values.
+
+    Checks:
+        - Department is present and in ALLOWED_DEPARTMENTS
+        - Suggestion is present and in ALLOWED_SUGGESTIONS
+        - Description is not blank
+        - Category is not blank
+        - Vendor name is not blank
+
+    Args:
+        vendors: List of vendor records.
+
+    Returns:
+        List of validation issue strings.
+    """
     issues = []
 
     for v in vendors:
@@ -116,8 +176,21 @@ def validate_vendors(vendors: List[dict]) -> List[str]:
     return issues
 
 
+# =============================================================================
+# Aggregation and Analysis Functions
+# =============================================================================
+
 def aggregate_by_field(vendors: List[dict], field: str) -> List[Tuple[str, int, float]]:
-    """Aggregate vendors by a field, returning (field_value, count, total_spend) descending by spend."""
+    """
+    Aggregate vendors by a field for reporting.
+
+    Args:
+        vendors: List of vendor records.
+        field: Field name to aggregate by.
+
+    Returns:
+        List of (field_value, count, total_spend) tuples, sorted by spend descending.
+    """
     agg = defaultdict(lambda: {"count": 0, "spend": 0.0})
 
     for v in vendors:
@@ -131,7 +204,20 @@ def aggregate_by_field(vendors: List[dict], field: str) -> List[Tuple[str, int, 
 
 
 def build_duplicate_groups(vendors: List[dict], aliases: List[dict]) -> List[dict]:
-    """Build possible duplicate groups from alias map and suspected_duplicates field."""
+    """
+    Build possible duplicate groups from multiple sources.
+
+    Sources:
+        1. Alias map: Pairs with similarity >= ALIAS_SCORE_THRESHOLD (prefix A###)
+        2. LLM-flagged: Vendors with suspected_duplicates field set (prefix L###)
+
+    Args:
+        vendors: List of vendor records.
+        aliases: List of alias pairs from vendor_alias_map.csv.
+
+    Returns:
+        List of duplicate group dicts, sorted by combined_spend descending.
+    """
     # Build vendor spend lookup
     vendor_spend = {v["vendor_name_raw"]: v["spend_usd"] for v in vendors}
 
@@ -234,6 +320,10 @@ def build_duplicate_groups(vendors: List[dict], aliases: List[dict]) -> List[dic
     return duplicate_groups
 
 
+# =============================================================================
+# Output Functions
+# =============================================================================
+
 def write_qa_report(
     vendors: List[dict],
     issues: List[str],
@@ -242,7 +332,17 @@ def write_qa_report(
     cat_agg: List[Tuple[str, int, float]],
     output_path: Path,
 ) -> None:
-    """Write the QA report markdown file."""
+    """
+    Write the QA report markdown file.
+
+    Args:
+        vendors: List of vendor records.
+        issues: List of validation issue strings.
+        dept_agg: Department aggregation data.
+        sugg_agg: Suggestion aggregation data.
+        cat_agg: Category aggregation data.
+        output_path: Path to output markdown file.
+    """
     total_vendors = len(vendors)
     total_spend = sum(v["spend_usd"] for v in vendors)
 
@@ -317,7 +417,13 @@ def write_qa_report(
 
 
 def write_duplicates_csv(duplicates: List[dict], output_path: Path) -> None:
-    """Write the possible duplicates CSV file."""
+    """
+    Write the possible duplicates CSV file.
+
+    Args:
+        duplicates: List of duplicate group dicts.
+        output_path: Path to output CSV file.
+    """
     with open(output_path, "w", encoding="utf-8", newline="") as f:
         fieldnames = ["group_id", "vendor_names", "combined_spend", "source", "notes"]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -326,10 +432,19 @@ def write_duplicates_csv(duplicates: List[dict], output_path: Path) -> None:
             writer.writerow(dup)
 
 
-def main():
-    """Main entry point."""
+# =============================================================================
+# Main Entry Point
+# =============================================================================
+
+def main() -> int:
+    """
+    Main entry point for QA checks.
+
+    Returns:
+        Exit code (0 for QA PASS, 1 for QA FAIL).
+    """
     print("=" * 60)
-    print("04_qa_checks.py - QA Validation and Duplicate Detection")
+    print("QA VALIDATION AND DUPLICATE DETECTION")
     print("=" * 60)
 
     qa_pass = True

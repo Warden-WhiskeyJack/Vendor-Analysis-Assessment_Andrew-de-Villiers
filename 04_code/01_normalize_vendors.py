@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Vendor Name Normalization Script
 
@@ -80,7 +81,10 @@ LEGAL_SUFFIXES = [
     'j.d.o.o', 'jdoo', 'obrt', 'vl', 'bvba', 'd.d', 'dd'
 ]
 
-# Minimum similarity score for alias detection
+# Minimum similarity score for alias detection.
+# 92% threshold balances precision (avoiding false positives from short/common names)
+# with recall (catching typos and minor variations). Lower values increase false
+# positives; higher values miss legitimate aliases.
 SIMILARITY_THRESHOLD = 92.0
 
 
