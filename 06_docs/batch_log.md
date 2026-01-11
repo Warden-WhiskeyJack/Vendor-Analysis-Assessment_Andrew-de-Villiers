@@ -47,6 +47,7 @@ Each batch should be appended to the table below after processing completes.
 |----------|------------|-------------|-----------|--------------|-------------|-----------|----------|----------|------------|--------|-------|
 | batch_001 | batch_001_input.csv | batch_001.csv | 1-50 | 50 | $1,833,768 | 24 | 16 | 10 | 21 | ✅ Complete | See detailed entry below |
 | batch_002 | batch_002_input.csv | batch_002.csv | 51-100 | 50 | $226,139 | 33 | 11 | 6 | 18 | ✅ Complete | See detailed entry below |
+| batch_003 | batch_003_input.csv | batch_003.csv | 101-150 | 50 | $82,101 | 24 | 22 | 4 | 14 | ✅ Complete | See detailed entry below |
 
 ---
 
@@ -109,3 +110,33 @@ Each batch should be appended to the table below after processing completes.
 - **HR services fragmentation:** Four distinct HR/payroll vendors across different regions indicate geographic requirements but potential for global vendor consolidation
 - **Acclime duplicate entities:** Acclime Corporate Services and Acclime USA appear to be same organization with regional entities - should consolidate billing and relationship management
 - **Professional services ambiguity:** Three vendors with unclear service types (Pinnacle Partnership CA, Orionw LLC, Calm Achiever, United Flow/Goodness Project) marked for termination review due to vague value proposition
+
+---
+
+### Batch 003 - Detailed Entry
+
+**Input File:** `02_working/01_batches/batch_003_input.csv`
+**Output File:** `03_outputs/01_claude_batches/batch_003.csv`
+**Row Range:** 101-150 (from batch_manifest.csv)
+**Vendor Count:** 50
+**Total Spend:** $82,101.00
+
+**Confidence Distribution:**
+- High: 24 vendors (48%)
+- Medium: 22 vendors (44%)
+- Low: 4 vendors (8%)
+
+**Suspected Duplicates:** 14 rows flagged with potential duplicates
+
+**Example Duplicate Groups:**
+1. **Individual Contractors:** Stipe Piric, John Smith, Fabiola Thistlewhaite, George Anchor, Susan Lee, Ansar Madovic (6 vendors, $12,045 combined - consolidate contractor management)
+2. **Hotel/Accommodation Overlap:** Grt Hotels And Resorts P Ltd, Radisson Grt - Unit Of Hotels & Resorts Pvt Ltd (2 vendors, $3,438 combined - same hotel chain)
+3. **Food/Catering Services:** City Pantry Ltd, Lunch Nutrition D.O.O., Oladi D.O.O., Etm Concessions Ltd (4 vendors, $6,914 combined)
+4. **Recreation Clubs:** Chamiers Recreation Club, P S Recreation Club (2 vendors, $2,557 combined)
+
+**Classification Notes and Assumptions:**
+- **Individual contractor fragmentation:** Six individual contractors totaling $12K suggest opportunity to consolidate through preferred staffing agencies or establish MSA with top performers
+- **Multi-regional operations:** Significant Croatian presence (11 D.O.O. entities) alongside UK, Indian, Australian, and German vendors indicates distributed operations requiring regional service providers
+- **Food service consolidation opportunity:** Four separate meal/catering vendors totaling $6,914 could be consolidated, especially the three Croatian providers (Lunch Nutrition, Oladi, Etm Concessions)
+- **Low-confidence vendors require validation:** Four vendors (Pink Ribbon Shop, Clime India, Golden Mean, Rhea D.O.O.) have unclear business purposes and should be reviewed for necessity
+- **One-time service (Office Move London):** $2,293 office relocation expense flagged for termination as service should be complete; verify no ongoing relationship
