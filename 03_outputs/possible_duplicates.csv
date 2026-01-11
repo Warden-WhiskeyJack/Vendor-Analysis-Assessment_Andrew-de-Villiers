@@ -1,0 +1,54 @@
+group_id,vendor_names,combined_spend,source,notes
+L001,Zagrebtower D.O.O. | Gpt Space & Co | Veniture D.O.O. | Work Easy Space Solutions Private Limited,371516.0,llm_flagged,LLM identified 4 potential duplicates
+L002,Weking D.O.O. | Zagrebtower D.O.O. | Veniture D.O.O.,367189.0,llm_flagged,LLM identified 3 potential duplicates
+L005,"Houlihan Lokey Advisors, Llc | Vector Capital Management Lp | Westbrook Advisers",85248.0,llm_flagged,LLM identified 3 potential duplicates
+L003,4I Advisory Services | 4I Management Consulting Private Limited,83977.0,llm_flagged,LLM identified 2 potential duplicates
+L004,"SveuäIliå¡Te U Zagrebu, Studentski Centar | Accutrainee Limited",83140.0,llm_flagged,LLM identified 2 potential duplicates
+L009,Smart Group Services D.O.O. | Nefron - Obrt Za Poslovne Usluge | Bijeli Pijesak Obrt Za Poslovno Savjetovanje,58657.0,llm_flagged,LLM identified 3 potential duplicates
+A002,tm forum | tmforum,58070.0,alias_map,Similarity score: 93.3%
+L006,Nefron - Obrt Za Poslovne Usluge | Bijeli Pijesak Obrt Za Poslovno Savjetovanje,42219.0,llm_flagged,LLM identified 2 potential duplicates
+L011,"Taxstudio, Ltd. | Eurofast International Ltd-Greec",32806.0,llm_flagged,LLM identified 2 potential duplicates
+L008,Plus Your Business Ltd | Collards Chartered Accountants,29953.0,llm_flagged,LLM identified 2 potential duplicates
+L010,Jones Lang Lasalle (Nsw) Pty Ltd | Cbre Limited,24669.0,llm_flagged,LLM identified 2 potential duplicates
+L013,Hrsolution International Ag | Mercer Limited | Australian Payroll Professionals Pty Ltd | Elemental Life Solutions Llp,19637.0,llm_flagged,LLM identified 4 potential duplicates
+L007,Eurofast International Ltd-Greec | Taxstudio | Ltd.,18164.0,llm_flagged,LLM identified 3 potential duplicates
+L017,"Acclime Usa, Inc | Acclime Corporate Services | Intertrust Singapore Corporate Services Pte Ltd - Csc",17768.0,llm_flagged,LLM identified 3 potential duplicates
+L015,Tattu Manchester Limited | Inter Continental Chennai Mahabalipuram Resort | Puducherry Backwater Resort Private Limited | Trocadero (London) Hotel Ltd,17683.0,llm_flagged,LLM identified 4 potential duplicates
+L020,Stipe Piric | Stipe Piric | John Smith | Fabiola Thistlewhaite | George Anchor | Susan Lee | Ansar Madovic,14522.0,llm_flagged,LLM identified 7 potential duplicates
+L012,Intertrust Singapore Corporate Services Pte Ltd - Csc | Acclime Corporate Services | Acclime Usa | Inc,12773.0,llm_flagged,LLM identified 4 potential duplicates
+L014,Telefã³Nica Compras Electrã³Nicas S.L. | Telemach Hrvatska D.O.O.,11291.0,llm_flagged,LLM identified 2 potential duplicates
+L018,Profi Bar D.O.O. | Tattu Manchester Limited,10283.0,llm_flagged,LLM identified 2 potential duplicates
+L016,Athlete Service Ltd | Gym4You D.O.O.,8977.0,llm_flagged,LLM identified 2 potential duplicates
+L019,City Pantry Ltd | City Pantry Ltd | Lunch Nutrition D.O.O. | Oladi D.O.O.,6914.0,llm_flagged,LLM identified 4 potential duplicates
+L022,Etm Concessions Ltd | City Pantry Ltd | Lunch Nutrition D.O.O. | Oladi D.O.O.,5914.0,llm_flagged,LLM identified 4 potential duplicates
+L021,Grt Hotels And Resorts P Ltd | Grt Hotels And Resorts P Ltd | Radisson Grt - Unit Of Hotels & Resorts Pvt Ltd,5470.0,llm_flagged,LLM identified 3 potential duplicates
+L029,Mesa Verde | Mesa Verde | Obrt Za Ugostiteljstvo Mirakul | Oakberry Jr D.O.O. | Magic Mountain Saloon | Yellow Submarine D.O.O. | Vivat Fina Vina D.O.O. | Del Posto D.O.O.,4265.0,llm_flagged,LLM identified 8 potential duplicates
+L025,Galop-Prijevoz D.O.O. | Galop-Prijevoz D.O.O. | Trans-Agram Obrt Za Dostavu | Croatia Airlines | Greencell Express Private Limited | Lancefield Bus Service | Super Odredište D.O.O.,4098.0,llm_flagged,LLM identified 7 potential duplicates
+L023,Chamiers Recreation Club | Chamiers Recreation Club | P S Recreation Club,3895.0,llm_flagged,LLM identified 3 potential duplicates
+L031,Super Odrediå¡Te D.O.O. | Galop-Prijevoz D.O.O. | Trans-Agram Obrt Za Dostavu | Croatia Airlines | Greencell Express Private Limited | Lancefield Bus Service | Super Odredište D.O.O.,3568.0,llm_flagged,LLM identified 7 potential duplicates
+L024,Time Out Group | Time Out Group | Urbani Eventi D.O.O. | Blink Events,3355.0,llm_flagged,LLM identified 4 potential duplicates
+L026,Lane Ip Limited | Lane Ip Limited | Kilgannon & Partners Llp | Pixsy Inc | Franklin | Gringer & Cohen | P.C.,2996.0,llm_flagged,LLM identified 7 potential duplicates
+L028,"President Hotel And Tower Co., Ltd | President Hotel And Tower Co. | Ltd | Hotel Zonar | Marvie Hotel - Krupa D.O.O. | Obiteljski Hoteli D.O.O. | Edwardian Pastoria Hotels Ltd (The Londoner)",2735.0,llm_flagged,LLM identified 7 potential duplicates
+L030,"Franklin, Gringer & Cohen, P.C. | Lane Ip Limited | Kilgannon & Partners Llp | Pixsy Inc | Franklin | Gringer & Cohen | P.C.",2572.0,llm_flagged,LLM identified 7 potential duplicates
+L027,Smashing Media Ag | Smashing Media Ag | Merchandise Ltd,2190.0,llm_flagged,LLM identified 3 potential duplicates
+L034,Pepe'S Italian And Liquor | The Riding House Cafe | Taste Of Health | Advena,1017.0,llm_flagged,LLM identified 4 potential duplicates
+L038,Adamma Info Services Private Limited | Kosmaz Technologies Croatia | Zettanet | Infodata,892.0,llm_flagged,LLM identified 4 potential duplicates
+L041,Djs For U | Rishi Events And Entainment | Maniax Melbourne Cbd | Event Ors,876.0,llm_flagged,LLM identified 4 potential duplicates
+L044,"Paint&Wine, Vl. Stevo Dosen | Rishi Events And Entainment | Maniax Melbourne Cbd | Event Ors",815.0,llm_flagged,LLM identified 4 potential duplicates
+L033,Spar Hrvatska D.O.O. | Amazon (Aus) | Notino S.R.O.,735.0,llm_flagged,LLM identified 3 potential duplicates
+L032,Niva Transport J.D.O.O. | Dhl | Parcelforce Worldwide,704.0,llm_flagged,LLM identified 3 potential duplicates
+L036,Maniax Melbourne Cbd | Rishi Events And Entainment | Event Ors | Paint&Wine,656.0,llm_flagged,LLM identified 4 potential duplicates
+L045,Sportkart D.O.O. | Rishi Events And Entainment | Maniax Melbourne Cbd,654.0,llm_flagged,LLM identified 3 potential duplicates
+L049,Pret A Manger | Pret A Manger | Axil Coffee Roasters | Wolt Enterprises Oy | Uber *Eats | Istra Wine | Pan-Pek D.O.O. | Cupcake Central (Life Is Sweet Bakery),523.0,llm_flagged,LLM identified 8 potential duplicates
+L037,National Securities Depository Limited(Nsdl) | Bigshare Services Private Limited,469.0,llm_flagged,LLM identified 2 potential duplicates
+L043,Floom Ltd | Regency Hampers Ltd,410.0,llm_flagged,LLM identified 2 potential duplicates
+L040,Expert-Ing D.O.O. | Xenon Savjetovanje D.O.O.,389.0,llm_flagged,LLM identified 2 potential duplicates
+L047,Vistaprint | Vistaprint | Snappy Snaps | Kall Kwik Centre 565,374.0,llm_flagged,LLM identified 4 potential duplicates
+L039,Media Promo Plus D.O.O. | Puzzle Promotion J.D.O.O.,369.0,llm_flagged,LLM identified 2 potential duplicates
+L042,Hotel Laguna D.D. | Advena,344.0,llm_flagged,LLM identified 2 potential duplicates
+L048,Dhl Express (Uk) Ltd | Dhl Express (Uk) Ltd | Fedex Express Uk Transportation Ltd | Gophr,337.0,llm_flagged,LLM identified 4 potential duplicates
+L035,"Pluralsight, Llc | Interaction Design Foundation",318.0,llm_flagged,LLM identified 2 potential duplicates
+L046,"Interaction Design Foundation, Inc | Pluralsight",138.0,llm_flagged,LLM identified 2 potential duplicates
+L050,Specijalisticka Ordinacija Medicine Rada I Sporta Ina Kardos | Specijalisticka Ordinacija Medicine Rada Helena Blazic | Ustanova Za Medicinu Rada I Sporta Dr. Novacki,60.0,llm_flagged,LLM identified 3 potential duplicates
+L051,Bakemono Bakers Melbourne | Coles,36.0,llm_flagged,LLM identified 2 potential duplicates
+A001,hr solution international | hrsolution international,0,alias_map,Similarity score: 98.0%
