@@ -1,0 +1,51 @@
+vendor_name_raw,spend_usd,department,category,description_1l,suggestion,confidence,rationale_short,suspected_duplicates
+Cloudcrossing Bvba,208675.0,Engineering,Cloud,Cloud infrastructure and hosting services provider,Optimize costs,Medium,High spend suggests review for cloud optimization,
+Zagrebtower D.O.O.,183754.0,Facilities,Coworking/Office,Office space or coworking facility in Zagreb,Optimize costs,Medium,Large facilities spend warrants cost review,Gpt Space & Co;Veniture D.O.O.;Work Easy Space Solutions Private Limited
+Weking D.O.O.,144093.0,Facilities,Coworking/Office,Office or workplace services provider,Optimize costs,Low,Croatian entity likely office-related but unclear,Zagrebtower D.O.O.;Veniture D.O.O.
+Gpt Space & Co,133507.0,Facilities,Coworking/Office,Coworking or office space provider,Consolidate,High,Multiple office space vendors suggest consolidation,Zagrebtower D.O.O.;Veniture D.O.O.;Work Easy Space Solutions Private Limited
+Hr Solution International Gmbh,80823.0,G&A,Recruiting,HR and recruiting solutions provider,Optimize costs,High,HR software should be evaluated for ROI,
+4I Advisory Services,71860.0,Professional Services,General Ops,Business advisory and consulting services,Consolidate,High,Duplicate with 4I Management Consulting,4I Management Consulting Private Limited
+Big Frontier Pty Ltd (Cult Of Monday),66131.0,G&A,General Ops,Team culture and employee engagement services,Terminate,Medium,Culture programs should justify ROI or terminate,
+Harmonic Group Limited,65418.0,Professional Services,General Ops,Business consulting and advisory services,Optimize costs,Low,Generic consulting requires scope clarity,
+Tmforum,57560.0,Engineering,General Ops,Telecom and IT industry association membership,Optimize costs,High,Association membership should show clear value,
+Kimble Applications Ltd,52825.0,Professional Services,Productivity/Collab,Professional services automation software platform,Optimize costs,High,PSA software spend should align with usage,
+"SveuäIliå¡Te U Zagrebu, Studentski Centar",44299.0,G&A,Recruiting,Zagreb student center for internship recruiting,Optimize costs,Medium,Recruiting partnership costs should be evaluated,Accutrainee Limited
+Ss&C Intralinks Inc,39966.0,M&A,Productivity/Collab,Virtual data room for M&A transactions,Optimize costs,High,VDR costs tied to deal activity,
+Veniture D.O.O.,39342.0,Facilities,Coworking/Office,Coworking or office space provider,Consolidate,High,Multiple office vendors suggest consolidation opportunity,Zagrebtower D.O.O.;Gpt Space & Co;Work Easy Space Solutions Private Limited
+Accutrainee Limited,38841.0,G&A,Recruiting,Training and recruitment services,Consolidate,Medium,Multiple recruiting vendors could be consolidated,"SveuäIliå¡Te U Zagrebu, Studentski Centar"
+"Houlihan Lokey Advisors, Llc",37461.0,M&A,Professional Services,Investment banking and M&A advisory,Optimize costs,High,M&A advisory tied to transaction activity,Vector Capital Management Lp;Westbrook Advisers
+Vector Capital Management Lp,32427.0,M&A,Professional Services,Private equity and M&A advisory services,Optimize costs,Medium,Multiple M&A advisors suggest possible overlap,"Houlihan Lokey Advisors, Llc";Westbrook Advisers
+Nefron - Obrt Za Poslovne Usluge,30614.0,Professional Services,General Ops,Croatian business services provider,Optimize costs,Low,Generic services require clearer scope definition,Bijeli Pijesak Obrt Za Poslovno Savjetovanje
+Uberflip,26091.0,Marketing,Marketing/SEO/PR,Content marketing and experience platform,Optimize costs,High,Marketing tech spend should align with usage,
+Agram Life Osiguranje D.O.O.,24952.0,G&A,General Ops,Croatian life insurance provider for employees,Optimize costs,High,Employee insurance should be competitively priced,
+Zuric I Partneri Odvjetnicko Drustvo D.O.O.,24135.0,Legal,Legal Services,Croatian law firm for legal services,Optimize costs,High,Legal services should be usage-based,
+New Star Networks(Nsn),23887.0,Engineering,Telecom,Network and telecom infrastructure services,Optimize costs,Medium,Telecom costs should be reviewed for optimization,
+Shree Info System Solutions Pvt Ltd,22275.0,Engineering,Security/IT Ops,IT services and systems integration,Optimize costs,Medium,IT services spend should align with deliverables,
+Mightyhive Ltd,19042.0,Marketing,Marketing/SEO/PR,Marketing analytics and advertising technology,Optimize costs,High,MarTech platform should show clear ROI,
+Eurofast International Ltd-Greec,18164.0,Finance,Audit/Tax,International tax and audit services,Optimize costs,High,Tax advisory should be annual or project-based,"Taxstudio, Ltd."
+Sodexo Svc India Private Limited,17810.0,Facilities,General Ops,Facilities management and food services,Optimize costs,High,Facilities services should be competitively bid,
+Peakon Aps,17108.0,G&A,Productivity/Collab,Employee engagement and feedback platform,Optimize costs,High,Employee survey tool should show engagement value,
+Plus Your Business Ltd,17074.0,Finance,Audit/Tax,Accounting and business advisory services,Consolidate,Medium,Multiple accounting firms suggest consolidation,Collards Chartered Accountants
+Benefit Systems D.O.O.,16900.0,G&A,General Ops,Employee benefits administration platform,Optimize costs,High,Benefits platform should be evaluated for ROI,
+Smart Group Services D.O.O.,16438.0,Professional Services,General Ops,Croatian business services and consulting,Optimize costs,Low,Generic services need scope clarity,Nefron - Obrt Za Poslovne Usluge;Bijeli Pijesak Obrt Za Poslovno Savjetovanje
+Jones Lang Lasalle (Nsw) Pty Ltd,16274.0,Facilities,Coworking/Office,Commercial real estate and facilities management,Optimize costs,High,JLL is major facilities provider worth reviewing,Cbre Limited
+Konzum Plus D.O.O.,15684.0,Facilities,General Ops,Croatian retail and food services for office,Optimize costs,Medium,Office food/supplies should be competitively priced,
+Westbrook Advisers,15360.0,M&A,Professional Services,M&A and financial advisory services,Consolidate,High,Third M&A advisor suggests consolidation opportunity,"Houlihan Lokey Advisors, Llc";Vector Capital Management Lp
+Work Easy Space Solutions Private Limited,14913.0,Facilities,Coworking/Office,Coworking and flexible office space solutions,Consolidate,High,Fourth office space vendor confirms consolidation need,Zagrebtower D.O.O.;Gpt Space & Co;Veniture D.O.O.
+"Taxstudio, Ltd.",14642.0,Finance,Audit/Tax,Tax preparation and advisory services,Consolidate,Medium,Multiple tax advisors could be consolidated,Eurofast International Ltd-Greec
+Pingo D.O.O.,14508.0,Facilities,General Ops,Croatian facilities or office services,Optimize costs,Low,Unclear vendor type requires investigation,
+Magazin Raunalni Sistemi D.O.O.,13870.0,Engineering,Security/IT Ops,Croatian IT and computer systems provider,Optimize costs,Medium,IT systems provider should show value,
+Tp Prime D.O.O.,13785.0,Facilities,General Ops,Croatian business services provider,Optimize costs,Low,Unclear vendor requires scope investigation,
+Granttree Limited,13659.0,Finance,Audit/Tax,R&D tax credit and grant consulting,Optimize costs,High,Tax credit service is performance-based ROI,
+Collards Chartered Accountants,12879.0,Finance,Audit/Tax,Chartered accounting and audit services,Consolidate,High,Third accounting firm suggests consolidation,Plus Your Business Ltd
+4I Management Consulting Private Limited,12117.0,Professional Services,General Ops,Management consulting services,Consolidate,High,Duplicate with 4I Advisory Services,4I Advisory Services
+"Grad Zagreb, Gradski Ured Za Prostorno Ureä'Enje,..",11637.0,Facilities,General Ops,Zagreb city planning office fees,Optimize costs,Medium,Government fees may not be negotiable,
+Bijeli Pijesak Obrt Za Poslovno Savjetovanje,11605.0,Professional Services,General Ops,Croatian business consulting services,Consolidate,Medium,Multiple Croatian consultants suggest consolidation,Nefron - Obrt Za Poslovne Usluge;Smart Group Services D.O.O.
+Ramiro D.O.O.,11516.0,Facilities,General Ops,Croatian facilities or business services,Optimize costs,Low,Unclear vendor type requires investigation,
+Visalogic Limited,11241.0,G&A,General Ops,Immigration and visa services for employees,Optimize costs,High,Visa services should align with hiring needs,
+Poles Ltd - Hanbury Manor,10488.0,G&A,General Ops,Event venue for corporate events,Terminate,Medium,Venue costs should justify business value,
+Shoff Darby Companies,10100.0,Professional Services,General Ops,Business consulting services,Optimize costs,Low,Unclear services require scope review,
+Emerge Development Consultancy Ltd,10046.0,Professional Services,General Ops,Development and business consulting,Optimize costs,Low,Generic consulting needs clearer deliverables,
+Performancepro,10018.0,G&A,Productivity/Collab,Performance management software platform,Optimize costs,Medium,Performance software should show HR value,
+Omonia D.O.O.,9559.0,Facilities,General Ops,Croatian facilities or business services,Optimize costs,Low,Unclear vendor requires investigation,
+Cbre Limited,8395.0,Facilities,Coworking/Office,Commercial real estate and facilities services,Consolidate,High,Second major facilities vendor with JLL,Jones Lang Lasalle (Nsw) Pty Ltd
