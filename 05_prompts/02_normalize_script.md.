@@ -1,0 +1,30 @@
+Write 04_code/01_normalize_vendors.py (Python) that:
+
+Input:
+- 01_inputs/vendors_raw.csv with columns:
+  Vendor Name
+  Department
+  Last 12 months Cost (USD)
+  1-line Description on what the Vendor does
+  Suggestions (Consolidate / Terminate / Optimize costs)
+
+Outputs:
+- 02_working/vendors_normalized.csv with columns:
+  vendor_name_raw, spend_usd, vendor_name_clean, vendor_name_canonical
+- 02_working/vendor_alias_map.csv with columns:
+  canonical_name, alias_name, similarity_score
+  Include only similarity_score >= 92.
+
+Behavior:
+- vendor_name_clean: lowercase, punctuation normalized, whitespace collapsed
+- vendor_name_canonical: strip common legal suffixes (ltd/llc/inc/gmbh/d.o.o etc), normalize separators
+
+Quality requirements (assessor-friendly):
+- module docstring (purpose, inputs, outputs, how to run)
+- pathlib.Path, main() entrypoint, helpful error messages
+- minimal dependencies; if rapidfuzz used, document install in console output
+
+Also print a short console summary:
+- row count, total spend, top 20 vendors by spend, alias link count
+
+After writing the script, run it and ensure the output files are created.
