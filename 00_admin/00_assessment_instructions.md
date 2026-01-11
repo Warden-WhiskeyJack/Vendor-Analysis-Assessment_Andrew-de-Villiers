@@ -7,6 +7,7 @@ Files Provided
 Vendor Analysis Assessment: A list of ~400 vendors and the spend over the last 12 months. This is real vendor data with modified names and costs.
 
 Instructions
+
 Make a copy of the spreadsheet
 Rename it to include your name: Vendor Analysis Assessment – [Your Name].
 Make sure anyone with the link can view.
