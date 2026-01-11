@@ -1,7 +1,3 @@
 # Admin
 
-Administrative documents and project management files.
-
-- Project plans, timelines, and schedules
-- Meeting notes and status updates
-- Budget and resource allocation documents
+Administrative documents and project information and management files.
