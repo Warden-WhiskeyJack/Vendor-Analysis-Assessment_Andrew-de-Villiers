@@ -46,6 +46,7 @@ Each batch should be appended to the table below after processing completes.
 | Batch ID | Input File | Output File | Row Range | Vendor Count | Total Spend | High Conf | Med Conf | Low Conf | Duplicates | Status | Notes |
 |----------|------------|-------------|-----------|--------------|-------------|-----------|----------|----------|------------|--------|-------|
 | batch_001 | batch_001_input.csv | batch_001.csv | 1-50 | 50 | $1,833,768 | 24 | 16 | 10 | 21 | ✅ Complete | See detailed entry below |
+| batch_002 | batch_002_input.csv | batch_002.csv | 51-100 | 50 | $226,139 | 33 | 11 | 6 | 18 | ✅ Complete | See detailed entry below |
 
 ---
 
