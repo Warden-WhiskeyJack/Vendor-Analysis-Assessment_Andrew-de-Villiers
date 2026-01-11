@@ -45,4 +45,35 @@ Each batch should be appended to the table below after processing completes.
 
 | Batch ID | Input File | Output File | Row Range | Vendor Count | Total Spend | High Conf | Med Conf | Low Conf | Duplicates | Status | Notes |
 |----------|------------|-------------|-----------|--------------|-------------|-----------|----------|----------|------------|--------|-------|
-| | | | | | | | | | | | |
+| batch_001 | batch_001_input.csv | batch_001.csv | 1-50 | 50 | $1,833,768 | 24 | 16 | 10 | 21 | ✅ Complete | See detailed entry below |
+
+---
+
+### Batch 001 - Detailed Entry
+
+**Input File:** `02_working/01_batches/batch_001_input.csv`
+**Output File:** `03_outputs/01_claude_batches/batch_001.csv`
+**Row Range:** 1-50 (from batch_manifest.csv)
+**Vendor Count:** 50
+**Total Spend:** $1,833,768.00
+
+**Confidence Distribution:**
+- High: 24 vendors (48%)
+- Medium: 16 vendors (32%)
+- Low: 10 vendors (20%)
+
+**Suspected Duplicates:** 21 rows flagged with potential duplicates
+
+**Example Duplicate Groups:**
+1. **Office Space Consolidation:** Zagrebtower D.O.O., Gpt Space & Co, Veniture D.O.O., Work Easy Space Solutions Private Limited (4 vendors, $382,515 combined)
+2. **M&A Advisors:** Houlihan Lokey Advisors, Vector Capital Management Lp, Westbrook Advisers (3 vendors, $85,248 combined)
+3. **4I Companies:** 4I Advisory Services, 4I Management Consulting Private Limited (2 vendors, $83,977 combined - likely same org)
+4. **Facilities/Real Estate:** Jones Lang Lasalle, Cbre Limited (2 major providers, $24,669 combined)
+5. **Croatian Business Services:** Nefron, Bijeli Pijesak, Smart Group Services (3 vendors, $58,657 combined)
+
+**Classification Notes and Assumptions:**
+- **Croatian vendors:** Many D.O.O. (Croatian LLC) entities with unclear business types were classified based on name inference; 10 vendors marked Low confidence due to ambiguous names (Weking, Pingo, Tp Prime, Ramiro, Omonia, etc.)
+- **Office space consolidation opportunity:** Four distinct office/coworking vendors totaling $382K suggest significant consolidation potential, especially in Zagreb region
+- **M&A advisory overlap:** Three M&A advisors may indicate deal-specific engagements or redundant relationships worth reviewing
+- **Generic consulting services:** Multiple "business services" and "consulting" vendors with vague scopes (Harmonic Group, Shoff Darby, Emerge Development) require deeper investigation to validate necessity
+- **Facilities management:** Both JLL and CBRE present suggest possible overlap in real estate/facilities services that could be consolidated
